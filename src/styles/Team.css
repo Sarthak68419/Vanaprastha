@@ -1,0 +1,164 @@
+.team-container {
+  font-family: 'Nunito', sans-serif;
+  color: #2f2f2f;
+  background-color: #fff;
+  }
+  
+  .breadcrumb-section {
+    background-color: #2f2f2f;   /* dark background */
+    color: #fff;              /* white text */
+    text-align: center;       /* center everything */
+    padding: 60px 20px;       /* top/bottom space */
+  }
+  
+  .breadcrumb-section h1 {
+    font-size: 48px;          /* large title */
+    font-weight: bold;
+    margin: 0 0 10px 0;
+  }
+  
+  .breadcrumb-section p {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .breadcrumb-home {
+    color: #f4a825;           /* goldish highlight for "Home" */
+    cursor: pointer;
+  }
+  
+/* Page Header */
+.team-hero {
+  text-align: center;
+  margin: 60px 20px 40px;
+}
+
+.team-subtitle {
+  color: #e7a548; /* soft orange */
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.team-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Team List */
+.team-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay Info */
+.team-info {
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  padding: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #f7931e; /* bright orange */
+  margin: 0;
+}
+
+.team-info span {
+  font-size: 14px;
+  color: #555;
+}
+
+.footer {
+  background-color: #8a7865; /* brown shade */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.footer-logo {
+  width: 150px;        /* fixed width */
+  height: auto;        /* scale height automatically */
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-nav li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-icons {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-icons img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.footer hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 20px auto;
+  width: 60%;
+}
+
+.footer-copy {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.footer-copy a {
+  color: #f0c674;
+  text-decoration: none;
+}
