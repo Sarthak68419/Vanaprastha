@@ -32,7 +32,15 @@ function Team() {
         </div>
 
         <div className="team-card">
-          <img src="images/team/Sarthak.jpg" alt="Bindhu Reddy" />
+          <img src="images/team/Siri.jpg" alt="Siri Vadlamudi" />
+          <div className="team-info">
+            <h4>Siri Vadlamudi</h4>
+            <span>Manager</span>
+          </div>
+        </div>
+
+        <div className="team-card">
+          <img src="images/team/Sarthak.jpg" alt="Sarthak Vadlamudi" />
           <div className="team-info">
             <h4>Sarthak Vadlamudi</h4>
             <span>Tech Lead</span>
