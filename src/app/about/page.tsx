@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import "../../styles/About.css";
 
 export default function About() {
@@ -17,7 +18,7 @@ export default function About() {
       {/* Welcome Section */}
       <div className="welcome-section">
         <div className="welcome-image">
-          <img src="images/home/welcome_collage.jpg" alt="Caregiver" />
+          <Image src="/images/home/welcome_collage.jpg" alt="Caregiver" width={800} height={500} />
         </div>
         <div className="welcome-text">
           <span className="welcome-subtitle">Welcome To Vanaprastha</span>
@@ -57,7 +58,7 @@ export default function About() {
 
         <div className="vm-right">
           <div className="vm-card">
-            <img src="images/about/vision.jpg" alt="vision icon" className="vm-icon" />
+            <Image src="/images/about/vision.jpg" alt="vision icon" className="vm-icon" width={80} height={80} />
             <h3>Vision</h3>
             <p>
               COMFORTABLE & PEACEFUL LIFE at their home – Even at their terminal
@@ -66,7 +67,7 @@ export default function About() {
           </div>
 
           <div className="vm-card">
-            <img src="images/about/mission.jpg" alt="mission icon" className="vm-icon" />
+            <Image src="/images/about/mission.jpg" alt="mission icon" className="vm-icon" width={80} height={80} />
             <h3>Mission</h3>
             <p>
               To provide the best care to every Elderly Person through a strong
@@ -87,14 +88,14 @@ export default function About() {
             Everyone should strive to live the best life possible, and seniors have a unique opportunity to show others how to find happiness throughout the aging process. These seven tips are perfect for every senior who wants to live a happy life in old age.
           </p>
           <div className="why-feature">
-            <img src="images/home/stick-images/money.jpg" alt="Reasonable Cost Icon" />
+            <Image src="/images/home/stick-images/money.jpg" alt="Reasonable Cost Icon" width={48} height={48} />
             <div>
               <h3>Reasonable Cost</h3>
               <p>We provide Eldercare services at very reasonable cost.</p>
             </div>
           </div>
           <div className="why-feature">
-            <img src="images/home/stick-images/thumbsup.jpg" alt="Good Quality Services Icon" />
+            <Image src="/images/home/stick-images/thumbsup.jpg" alt="Good Quality Services Icon" width={48} height={48} />
             <div>
               <h3>Good Quality Services</h3>
               <p>
@@ -104,7 +105,7 @@ export default function About() {
           </div>
         </div>
         <div className="why-choose-image">
-          <img src="images/home/choose_us.jpg" alt="Caregivers" />
+          <Image src="/images/home/choose_us.jpg" alt="Caregivers" width={600} height={400} />
         </div>
       </div>
 
@@ -115,7 +116,7 @@ export default function About() {
           The Qualified, Licensed, And Professional Nurses & Doctors You Can Rely On
         </h2>
         <div className="team-collage">
-          <img src="/images/home/team.jpg" alt="The Team" />
+          <Image src="/images/home/team.jpg" alt="The Team" width={900} height={400} />
         </div>
         <Link href="/team" className="btn">Nurses & Doctors</Link>
       </div>
@@ -124,10 +125,12 @@ export default function About() {
       <footer className="footer">
         <div className="footer-content">
           {/* Logo */}
-          <img
+          <Image
             src="/images/navbar/logo.jpg"
             alt="Logo"
             className="footer-logo"
+            width={120}
+            height={60}
           />
 
           {/* Nav Links */}
@@ -142,9 +145,9 @@ export default function About() {
 
           {/* Social Icons */}
           <div className="footer-icons">
-            <img src="/images/facebook.jpg" alt="icon" />
-            <img src="/images/twitter.jpg" alt="icon" />
-            <img src="/images/youtube.jpg" alt="icon" />
+            <Image src="/images/facebook.jpg" alt="icon" width={32} height={32} />
+            <Image src="/images/twitter.jpg" alt="icon" width={32} height={32} />
+            <Image src="/images/youtube.jpg" alt="icon" width={32} height={32} />
           </div>
 
           <hr />

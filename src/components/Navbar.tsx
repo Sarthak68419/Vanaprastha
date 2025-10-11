@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
@@ -6,7 +7,7 @@ const Navbar = () => {
     <nav className="navbar">
       {/* Logo Section */}
       <div className="logo">
-        <img src="/images/navbar/logo.jpg" alt="Vanaprastha Logo" className="logo_pic" />
+        <Image src="/images/navbar/logo.jpg" alt="Vanaprastha Logo" className="logo_pic" width={120} height={60} />
       </div>
 
       {/* Nav Links */}

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import "../../styles/Team.css";
 
 export default function Team() {
@@ -23,7 +24,7 @@ export default function Team() {
       {/* Team Members */}
       <section className="team-list">
         <div className="team-card">
-          <img src="images/team/team1.jpg" alt="Rani Koppula" />
+          <Image src="/images/team/team1.jpg" alt="Rani Koppula" width={240} height={240} />
           <div className="team-info">
             <h4>Rani Koppula</h4>
             <span>Doctor, Managing Director</span>
@@ -31,7 +32,7 @@ export default function Team() {
         </div>
 
         <div className="team-card">
-          <img src="images/team/Siri.jpg" alt="Siri Vadlamudi" />
+          <Image src="/images/team/Siri.jpg" alt="Siri Vadlamudi" width={240} height={240} />
           <div className="team-info">
             <h4>Siri Vadlamudi</h4>
             <span>Manager</span>
@@ -39,7 +40,7 @@ export default function Team() {
         </div>
 
         <div className="team-card">
-          <img src="images/team/Sarthak.jpg" alt="Sarthak Vadlamudi" />
+          <Image src="/images/team/Sarthak.jpg" alt="Sarthak Vadlamudi" width={240} height={240} />
           <div className="team-info">
             <h4>Sarthak Vadlamudi</h4>
             <span>Tech Lead</span>
@@ -47,7 +48,7 @@ export default function Team() {
         </div>
 
         <div className="team-card">
-          <img src="images/team/team2.jpg" alt="Bindhu Reddy" />
+          <Image src="/images/team/team2.jpg" alt="Bindhu Reddy" width={240} height={240} />
           <div className="team-info">
             <h4>Bindhu Reddy</h4>
             <span>Manager</span>
@@ -55,7 +56,7 @@ export default function Team() {
         </div>
 
         <div className="team-card">
-          <img src="images/team/team3.jpg" alt="Vanaprastha Team" />
+          <Image src="/images/team/team3.jpg" alt="Vanaprastha Team" width={240} height={240} />
           <div className="team-info">
             <h4>Vanaprastha</h4>
             <span>Team</span>

@@ -1,5 +1,6 @@
 {
-  "name": "my-nextjs-temp",
+  "name": "vanaprastha",
+  "description": "Making You Feel Special Is Not Our Goal But Our Identity. Providing care that comes from the heart, every day.",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -19,6 +20,8 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@typescript-eslint/eslint-plugin": "^8.46.0",
+    "@typescript-eslint/parser": "^8.46.0",
     "eslint": "^9.37.0",
     "eslint-config-next": "^15.5.4",
     "tailwindcss": "^4",

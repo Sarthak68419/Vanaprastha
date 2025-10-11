@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import "../../styles/Services.css";
 
 export default function Services() {
@@ -83,8 +84,8 @@ export default function Services() {
       {/* Testimonials Section */}
       <div className="testimonials-section">
         <div className="testimonial-card">
-          <div className="testimonial-image">
-            <img src="images/home/positivemission.jpg" alt="Reviewer" />
+            <div className="testimonial-image">
+            <Image src="/images/home/positivemission.jpg" alt="Reviewer" width={400} height={250} />
             <div className="testimonial-tag">
               Positive Mission Of Helping Vulnerable Older Adults, Cooperative Team
               Environment. Good Combination Of Pay And Time Off
@@ -101,10 +102,12 @@ export default function Services() {
               of the many obstacles we were going to face.
             </p>
             <div className="reviewer-info">
-              <img
-                src="images/home/johndoe.jpg"
+              <Image
+                src="/images/home/johndoe.jpg"
                 alt="Reviewer"
                 className="reviewer-photo"
+                width={80}
+                height={80}
               />
               <div>
                 <p className="reviewer-name">John Doe</p>
@@ -119,10 +122,12 @@ export default function Services() {
       <footer className="footer">
         <div className="footer-content">
           {/* Logo */}
-          <img
+          <Image
             src="/images/navbar/logo.jpg"
             alt="Logo"
             className="footer-logo"
+            width={120}
+            height={60}
           />
 
           {/* Nav Links */}
@@ -137,9 +142,9 @@ export default function Services() {
 
           {/* Social Icons */}
           <div className="footer-icons">
-            <img src="/images/facebook.jpg" alt="icon" />
-            <img src="/images/twitter.jpg" alt="icon" />
-            <img src="/images/youtube.jpg" alt="icon" />
+            <Image src="/images/facebook.jpg" alt="icon" width={32} height={32} />
+            <Image src="/images/twitter.jpg" alt="icon" width={32} height={32} />
+            <Image src="/images/youtube.jpg" alt="icon" width={32} height={32} />
           </div>
 
           <hr />

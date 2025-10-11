@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import "../../styles/Gallery.css";
 
 export default function Gallery() {
@@ -34,7 +35,7 @@ export default function Gallery() {
       <div className="gallery-grid">
         {images.map((src, idx) => (
           <div key={idx} className="gallery-item">
-            <img src={src} alt={`Gallery ${idx + 1}`} />
+            <Image src={src} alt={`Gallery ${idx + 1}`} width={600} height={400} />
           </div>
         ))}
       </div>
@@ -43,10 +44,12 @@ export default function Gallery() {
       <footer className="footer">
         <div className="footer-content">
           {/* Logo */}
-          <img
+          <Image
             src="/images/navbar/logo.jpg"
             alt="Logo"
             className="footer-logo"
+            width={120}
+            height={60}
           />
 
           {/* Nav Links */}
@@ -61,9 +64,9 @@ export default function Gallery() {
 
           {/* Social Icons */}
           <div className="footer-icons">
-            <img src="/images/facebook.jpg" alt="icon" />
-            <img src="/images/twitter.jpg" alt="icon" />
-            <img src="/images/youtube.jpg" alt="icon" />
+            <Image src="/images/facebook.jpg" alt="icon" width={32} height={32} />
+            <Image src="/images/twitter.jpg" alt="icon" width={32} height={32} />
+            <Image src="/images/youtube.jpg" alt="icon" width={32} height={32} />
           </div>
 
           <hr />

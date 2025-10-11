@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import "../../styles/Contact.css";
 
 export default function Contact() {
@@ -26,7 +27,7 @@ export default function Contact() {
           </p>
 
           <div className="info-block">
-            <img src="/images/home/clock.jpg" alt="work hours" />
+            <Image src="/images/home/clock.jpg" alt="work hours" width={48} height={48} />
             <div>
               <h4>Work Hours</h4>
               <p>
@@ -38,7 +39,7 @@ export default function Contact() {
           </div>
 
           <div className="info-block">
-            <img src="/images/home/location.jpg" alt="location" />
+            <Image src="/images/home/location.jpg" alt="location" width={48} height={48} />
             <div>
               <h4>Our Location</h4>
               <p>
@@ -50,7 +51,7 @@ export default function Contact() {
           </div>
 
           <div className="info-block">
-            <img src="/images/whatsapp.jpg" alt="call" />
+            <Image src="/images/whatsapp.jpg" alt="call" width={48} height={48} />
             <div>
               <h4>Call Now</h4>
               <p>Whatsapp: +91 9010647888<br />Phone: 04035837011</p>
@@ -60,7 +61,7 @@ export default function Contact() {
           </div>
 
           <div className="info-block">
-            <img src="/images/home/mail.jpg" alt="email" />
+            <Image src="/images/home/mail.jpg" alt="email" width={48} height={48} />
             <div>
               <h4>Our Email</h4>
               <p>ranikoppula.reddy.rk@gmail.com</p>
@@ -91,10 +92,12 @@ export default function Contact() {
       <footer className="footer">
         <div className="footer-content">
           {/* Logo */}
-          <img
+          <Image
             src="/images/navbar/logo.jpg"
             alt="Logo"
             className="footer-logo"
+            width={120}
+            height={60}
           />
 
           {/* Nav Links */}
@@ -109,9 +112,9 @@ export default function Contact() {
 
           {/* Social Icons */}
           <div className="footer-icons">
-            <img src="/images/facebook.jpg" alt="icon" />
-            <img src="/images/twitter.jpg" alt="icon" />
-            <img src="/images/youtube.jpg" alt="icon" />
+            <Image src="/images/facebook.jpg" alt="icon" width={32} height={32} />
+            <Image src="/images/twitter.jpg" alt="icon" width={32} height={32} />
+            <Image src="/images/youtube.jpg" alt="icon" width={32} height={32} />
           </div>
 
           <hr />
