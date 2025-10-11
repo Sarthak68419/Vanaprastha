@@ -27,7 +27,7 @@ function Contact() {
           </p>
 
           <div className="info-block">
-            <img src="/image/home/clock.jpg" alt="work hours" />
+            <img src="/images/home/clock.jpg" alt="work hours" />
             <div>
               <h4>Work Hours</h4>
               <p>
@@ -39,7 +39,7 @@ function Contact() {
           </div>
 
           <div className="info-block">
-            <img src="/image/home/location.jpg" alt="location" />
+            <img src="/images/home/location.jpg" alt="location" />
             <div>
               <h4>Our Location</h4>
               <p>
@@ -51,7 +51,7 @@ function Contact() {
           </div>
 
           <div className="info-block">
-            <img src="/image/whatsapp.jpg" alt="call" />
+            <img src="/images/whatsapp.jpg" alt="call" />
             <div>
               <h4>Call Now</h4>
               <p>Whatsapp: +91 9010647888<br />Phone: 04035837011</p>
@@ -61,7 +61,7 @@ function Contact() {
           </div>
 
           <div className="info-block">
-            <img src="/image/home/mail.jpg" alt="email" />
+            <img src="/images/home/mail.jpg" alt="email" />
             <div>
               <h4>Our Email</h4>
               <p>ranikoppula.reddy.rk@gmail.com</p>

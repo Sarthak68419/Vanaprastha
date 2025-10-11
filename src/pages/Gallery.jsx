@@ -10,7 +10,7 @@ function Gallery() {
     "/images/gallery/gallery3.jpeg",
     "/images/gallery/gallery4.jpeg",
     "/images/gallery/gallery5.jpg",
-    "/images/gallery/gallery6.jpg"
+    "/images/gallery/gallery6.jpg",
     "/images/gallery/gallery7.jpg",
     "/images/gallery/gallery8.jpg",
   ];
