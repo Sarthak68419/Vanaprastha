@@ -1,9 +1,8 @@
 import React from "react";
-import "../styles/Gallery.css";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import "../../styles/Gallery.css";
 
-
-function Gallery() {
+export default function Gallery() {
   const images = [
     "/images/gallery/gallery1.jpg",
     "/images/gallery/gallery2.jpg",
@@ -52,12 +51,12 @@ function Gallery() {
 
           {/* Nav Links */}
           <ul className="footer-nav">
-            <li><Link to="/home">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/team">Team</Link></li>
-            <li><Link to="/">Gallery</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/about">About Us</Link></li>
+            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/team">Team</Link></li>
+            <li><Link href="/gallery">Gallery</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
           </ul>
 
           {/* Social Icons */}
@@ -79,5 +78,3 @@ function Gallery() {
     </div>
   );
 }
-
-export default Gallery;

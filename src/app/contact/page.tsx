@@ -1,9 +1,8 @@
 import React from "react";
-import "../styles/Contact.css";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import "../../styles/Contact.css";
 
-
-function Contact() {
+export default function Contact() {
   return (
     <div className="contact-container">
       
@@ -23,7 +22,7 @@ function Contact() {
           <h2 className="info-title">Come & Be a Part Of Our New Family</h2>
           <p className="info-desc">
             Elderlycare is an umbrella term for a wide array of services intended to help 
-            older people live as comfortably and independently as possible.
+            older people to live as comfortably and independently as possible.
           </p>
 
           <div className="info-block">
@@ -88,8 +87,8 @@ function Contact() {
         </div>
       </div>
       
-            {/* Footer */}
-            <footer className="footer">
+      {/* Footer */}
+      <footer className="footer">
         <div className="footer-content">
           {/* Logo */}
           <img
@@ -100,12 +99,12 @@ function Contact() {
 
           {/* Nav Links */}
           <ul className="footer-nav">
-            <li><Link to="/home">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/team">Team</Link></li>
-            <li><Link to="/gallery">Gallery</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/about">About Us</Link></li>
+            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/team">Team</Link></li>
+            <li><Link href="/gallery">Gallery</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
           </ul>
 
           {/* Social Icons */}
@@ -127,5 +126,3 @@ function Contact() {
     </div>
   );
 }
-
-export default Contact;

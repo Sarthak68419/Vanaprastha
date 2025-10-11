@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom"; // ✅ make sure Link works
-import "../styles/About.css";
+import Link from "next/link";
+import "../../styles/About.css";
 
-function About() {
+export default function About() {
   return (
     <div className="about-container">
 
@@ -117,7 +117,7 @@ function About() {
         <div className="team-collage">
           <img src="/images/home/team.jpg" alt="The Team" />
         </div>
-        <Link to="/team" className="btn">Nurses & Doctors</Link>
+        <Link href="/team" className="btn">Nurses & Doctors</Link>
       </div>
 
       {/* Footer */}
@@ -132,12 +132,12 @@ function About() {
 
           {/* Nav Links */}
           <ul className="footer-nav">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/team">Team</Link></li>
-            <li><Link to="/gallery">Gallery</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/about">About Us</Link></li>
+            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/team">Team</Link></li>
+            <li><Link href="/gallery">Gallery</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
           </ul>
 
           {/* Social Icons */}
@@ -159,5 +159,3 @@ function About() {
     </div>
   );
 }
-
-export default About;

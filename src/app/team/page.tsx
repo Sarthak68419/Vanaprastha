@@ -1,9 +1,8 @@
 import React from "react";
-import "../styles/Team.css";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import "../../styles/Team.css";
 
-
-function Team() {
+export default function Team() {
   return (
     <div className="team-container">
       
@@ -64,8 +63,8 @@ function Team() {
         </div>
       </section>
 
-            {/* Footer */}
-            <footer className="footer">
+      {/* Footer */}
+      <footer className="footer">
         <div className="footer-content">
           {/* Logo */}
           <img
@@ -76,12 +75,12 @@ function Team() {
 
           {/* Nav Links */}
           <ul className="footer-nav">
-            <li><Link to="/home">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/team">Team</Link></li>
-            <li><Link to="/gallery">Gallery</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/about">About Us</Link></li>
+            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/team">Team</Link></li>
+            <li><Link href="/gallery">Gallery</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
           </ul>
 
           {/* Social Icons */}
@@ -103,5 +102,3 @@ function Team() {
     </div>
   );
 }
-
-export default Team;

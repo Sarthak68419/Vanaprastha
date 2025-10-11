@@ -1,8 +1,8 @@
 import React from "react";
-import "../styles/Services.css";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import "../../styles/Services.css";
 
-function Services() {
+export default function Services() {
   return (
     <div className="services-container">
 
@@ -127,12 +127,12 @@ function Services() {
 
           {/* Nav Links */}
           <ul className="footer-nav">
-            <li><Link to="/home">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/">Services</Link></li>
-            <li><Link to="/team">Team</Link></li>
-            <li><Link to="/gallery">Gallery</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/about">About Us</Link></li>
+            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/team">Team</Link></li>
+            <li><Link href="/gallery">Gallery</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
           </ul>
 
           {/* Social Icons */}
@@ -154,5 +154,3 @@ function Services() {
     </div>
   );
 }
-
-export default Services;
