@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Footer from '../components/Footer';
 import AboutSection from '../components/AboutSection';
+import { Badge } from '@/components/ui/badge';
 
 export default function Home() {
     return (
@@ -16,7 +17,7 @@ export default function Home() {
                     width={1200}
                     height={700}
                 />
-                <div className="text-card-foreground absolute top-1/5 left-5 max-w-lg">
+                <div className="absolute top-1/5 left-5 max-w-lg text-white">
                     <h1 className="mb-4 text-4xl font-bold">
                         Making You Feel Special Is Not Our Goal But Our Identity
                     </h1>
@@ -29,15 +30,11 @@ export default function Home() {
                     >
                         Get Started
                     </Link>
-                </div>
-                <div className="absolute top-1/3 right-5 flex flex-col gap-4">
-                    <div className="bg-primary text-primary-foreground w-44 rounded-lg p-4 shadow-md">
-                        <h4 className="font-semibold">
+                    <div className="mt-3 flex flex-wrap gap-2">
+                        <Badge variant="secondary">
                             Flexible Time Visiting
-                        </h4>
-                    </div>
-                    <div className="bg-primary text-primary-foreground w-44 rounded-lg p-4 shadow-md">
-                        <h4 className="font-semibold">24/7 Support</h4>
+                        </Badge>
+                        <Badge variant="secondary">24/7 Support</Badge>
                     </div>
                 </div>
             </section>

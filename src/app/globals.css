@@ -145,4 +145,7 @@
     .prose a {
         color: var(--primary);
     }
+    ::selection {
+        @apply bg-primary text-foreground;
+    }
 }
