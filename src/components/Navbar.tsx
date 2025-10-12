@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
     return (
@@ -53,6 +54,11 @@ const Navbar = () => {
                 >
                     Contact
                 </Link>
+            </div>
+            <div className="ml-auto">
+                <Button asChild>
+                    <Link href="/contact">Contact</Link>
+                </Button>
             </div>
         </nav>
     );

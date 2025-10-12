@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
 
 type Props = {
     eyebrow?: string;
@@ -46,12 +47,12 @@ export default function AboutSection({
                     {body ? <p className="mb-6">{body}</p> : null}
                 </div>
                 {ctaHref && ctaLabel ? (
-                    <Link
-                        href={ctaHref}
-                        className="bg-primary text-primary-foreground inline-block rounded-md px-4 py-3 font-medium hover:opacity-90"
+                    <Button
+                        asChild
+                        className="inline-block font-medium hover:opacity-90"
                     >
-                        {ctaLabel}
-                    </Link>
+                        <Link href={ctaHref}>{ctaLabel}</Link>
+                    </Button>
                 ) : null}
             </div>
         </section>

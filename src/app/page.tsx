@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Footer from '../components/Footer';
 import AboutSection from '../components/AboutSection';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import ContactForm from '@/components/ContactForm';
 
 export default function Home() {
     return (
@@ -24,12 +26,12 @@ export default function Home() {
                     <p className="mb-4">
                         Providing care that comes from the heart, every day.
                     </p>
-                    <Link
-                        href="/contact"
-                        className="bg-primary text-primary-foreground inline-block rounded-md px-6 py-3 text-base font-medium"
+                    <Button
+                        asChild
+                        className="inline-block text-base font-medium"
                     >
-                        Get Started
-                    </Link>
+                        <Link href="/contact">Get Started</Link>
+                    </Button>
                     <div className="mt-3 flex flex-wrap gap-2">
                         <Badge variant="secondary">
                             Flexible Time Visiting
@@ -228,52 +230,9 @@ export default function Home() {
                     </div>
                 </div>
 
-                <form className="bg-card text-card-foreground flex flex-col gap-4 rounded-lg p-8 shadow-lg">
-                    <div className="flex gap-4">
-                        <input
-                            className="flex-1 rounded-md border p-3"
-                            type="text"
-                            placeholder="First name here"
-                        />
-                        <input
-                            className="flex-1 rounded-md border p-3"
-                            type="text"
-                            placeholder="Last name here"
-                        />
-                    </div>
-                    <div className="flex gap-4">
-                        <input
-                            className="flex-1 rounded-md border p-3"
-                            type="tel"
-                            placeholder="Mobile number here"
-                        />
-                        <input
-                            className="flex-1 rounded-md border p-3"
-                            type="email"
-                            placeholder="Add email"
-                        />
-                    </div>
-                    <input
-                        className="rounded-md border p-3"
-                        type="text"
-                        placeholder="Enter Area"
-                    />
-                    <input
-                        className="rounded-md border p-3"
-                        type="text"
-                        placeholder="How can we help you?"
-                    />
-                    <textarea
-                        className="min-h-[120px] resize-y rounded-md border p-3"
-                        placeholder="Your Message"
-                    ></textarea>
-                    <button
-                        className="bg-primary text-primary-foreground rounded-md px-4 py-3 font-bold"
-                        type="submit"
-                    >
-                        Submit Now
-                    </button>
-                </form>
+                <div className="bg-card text-card-foreground rounded-lg p-8 shadow-lg">
+                    <ContactForm />
+                </div>
             </section>
 
             {/* Testimonials Section */}

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Footer from '../../components/Footer';
 import AboutSection from '../../components/AboutSection';
+import { Button } from '@/components/ui/button';
 
 export default function About() {
     return (
@@ -161,12 +162,12 @@ export default function About() {
                         className="h-auto w-full"
                     />
                 </div>
-                <Link
-                    href="/team"
-                    className="bg-primary text-primary-foreground inline-block rounded-md px-6 py-3 font-semibold hover:opacity-90"
+                <Button
+                    asChild
+                    className="inline-block font-semibold hover:opacity-90"
                 >
-                    Nurses & Doctors
-                </Link>
+                    <Link href="/team">Nurses & Doctors</Link>
+                </Button>
             </section>
 
             <Footer />
