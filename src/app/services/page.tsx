@@ -1,7 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import Footer from '../../components/Footer';
-
+import {
+    Card,
+    CardContent,
+    CardTitle,
+    CardDescription,
+} from '@/components/ui/card';
 export default function Services() {
     return (
         <div className="bg-background text-foreground">
@@ -56,20 +61,22 @@ export default function Services() {
                             desc: 'If necessary, we provide end-to-end funeral services for the deceased person.',
                         },
                     ].map((s) => (
-                        <div
+                        <Card
                             key={s.title}
-                            className="bg-card text-card-foreground rounded-lg p-8 shadow-md transition hover:translate-y-[-4px]"
+                            className="rounded-lg shadow-md transition hover:translate-y-[-4px]"
                         >
-                            <div className="bg-primary text-primary-foreground mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full text-2xl">
-                                {s.icon}
-                            </div>
-                            <h3 className="mb-2 text-xl font-semibold">
-                                {s.title}
-                            </h3>
-                            <p className="text-muted-foreground prose text-sm">
-                                {s.desc}
-                            </p>
-                        </div>
+                            <CardContent className="p-8 text-center">
+                                <div className="bg-primary text-primary-foreground mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full text-2xl">
+                                    {s.icon}
+                                </div>
+                                <CardTitle className="mb-2 text-xl font-semibold">
+                                    {s.title}
+                                </CardTitle>
+                                <CardDescription className="text-muted-foreground prose text-sm">
+                                    {s.desc}
+                                </CardDescription>
+                            </CardContent>
+                        </Card>
                     ))}
                 </div>
             </main>

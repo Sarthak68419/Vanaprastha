@@ -4,6 +4,13 @@ import Footer from '../../components/Footer';
 import AboutSection from '../../components/AboutSection';
 import WhyChooseUs from '../components/WhyChooseUs';
 import TeamSection from '../components/TeamSection';
+import {
+    Card,
+    CardHeader,
+    CardTitle,
+    CardDescription,
+    CardContent,
+} from '@/components/ui/card';
 
 export default function About() {
     return (
@@ -54,35 +61,39 @@ export default function About() {
                 </div>
 
                 <div className="flex min-w-[300px] flex-1 gap-4">
-                    <div className="bg-card text-card-foreground w-56 rounded-xl p-6 text-center shadow-md">
-                        <Image
-                            src="/images/about/vision.jpg"
-                            alt="vision icon"
-                            width={80}
-                            height={80}
-                            className="mx-auto mb-4"
-                        />
-                        <h3 className="text-lg font-semibold">Vision</h3>
-                        <p className="text-sm text-[#444]">
-                            COMFORTABLE & PEACEFUL LIFE at their home - Even at
-                            their terminal stage of life with our support
-                        </p>
-                    </div>
+                    <Card className="w-56 text-center shadow-md">
+                        <CardContent className="p-6">
+                            <Image
+                                src="/images/about/vision.jpg"
+                                alt="vision icon"
+                                width={80}
+                                height={80}
+                                className="mx-auto mb-4"
+                            />
+                            <CardTitle className="text-lg">Vision</CardTitle>
+                            <CardDescription className="mt-2 text-sm text-[#444]">
+                                COMFORTABLE & PEACEFUL LIFE at their home - Even
+                                at their terminal stage of life with our support
+                            </CardDescription>
+                        </CardContent>
+                    </Card>
 
-                    <div className="bg-card text-card-foreground w-56 rounded-xl p-6 text-center shadow-md">
-                        <Image
-                            src="/images/about/mission.jpg"
-                            alt="mission icon"
-                            width={80}
-                            height={80}
-                            className="mx-auto mb-4"
-                        />
-                        <h3 className="text-lg font-semibold">Mission</h3>
-                        <p className="text-sm text-[#444]">
-                            To provide the best care to every Elderly Person
-                            through a strong focus on service.
-                        </p>
-                    </div>
+                    <Card className="w-56 text-center shadow-md">
+                        <CardContent className="p-6">
+                            <Image
+                                src="/images/about/mission.jpg"
+                                alt="mission icon"
+                                width={80}
+                                height={80}
+                                className="mx-auto mb-4"
+                            />
+                            <CardTitle className="text-lg">Mission</CardTitle>
+                            <CardDescription className="mt-2 text-sm text-[#444]">
+                                To provide the best care to every Elderly Person
+                                through a strong focus on service.
+                            </CardDescription>
+                        </CardContent>
+                    </Card>
                 </div>
             </section>
 
