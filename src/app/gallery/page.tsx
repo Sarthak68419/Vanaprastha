@@ -2,21 +2,70 @@ import React from 'react';
 import Image from 'next/image';
 import Footer from '../../components/Footer';
 
+type GalleryImage = {
+    src: string;
+    width: number;
+    height: number;
+    alt: string;
+};
+
 export default function Gallery() {
-    const images = [
-        '/images/gallery/gallery1.jpg',
-        '/images/gallery/gallery2.jpg',
-        '/images/gallery/gallery3.jpeg',
-        '/images/gallery/gallery4.jpeg',
-        '/images/gallery/gallery5.jpg',
-        '/images/gallery/gallery6.jpg',
-        '/images/gallery/gallery7.jpg',
-        '/images/gallery/gallery8.jpg',
+    // Use real intrinsic dimensions so images render in a natural collage
+    // TODO: Use better alt texts - the current ones are misleading
+    const images: GalleryImage[] = [
+        {
+            src: '/images/gallery/gallery1.jpg',
+            width: 1280,
+            height: 722,
+            alt: 'Residents enjoying nature walk',
+        },
+        {
+            src: '/images/gallery/gallery2.jpg',
+            width: 1024,
+            height: 768,
+            alt: 'Community space with warm lighting',
+        },
+        {
+            src: '/images/gallery/gallery5.jpg',
+            width: 1600,
+            height: 1200,
+            alt: 'Cozy lounge and reading corner',
+        },
+        {
+            src: '/images/gallery/gallery3.jpeg',
+            width: 4032,
+            height: 1860,
+            alt: 'Wide garden view with pathways',
+        },
+        {
+            src: '/images/gallery/gallery4.jpeg',
+            width: 4032,
+            height: 1860,
+            alt: 'Panoramic outdoor seating area',
+        },
+        {
+            src: '/images/gallery/gallery6.jpg',
+            width: 1280,
+            height: 723,
+            alt: 'Sunlit corridor with plants',
+        },
+        {
+            src: '/images/gallery/gallery7.jpg',
+            width: 1024,
+            height: 768,
+            alt: 'Dining area prepared for a meal',
+        },
+        {
+            src: '/images/gallery/gallery8.jpg',
+            width: 1024,
+            height: 768,
+            alt: 'Activity room with games and art',
+        },
     ];
 
     return (
         <div className="bg-[var(--background)] text-[var(--foreground)]">
-            <section className="bg-[var(--foreground)] py-16 text-center text-[var(--primary-foreground)]">
+            <section className="bg-foreground text-primary-foreground py-16 text-center">
                 <h1 className="text-4xl font-bold">Gallery</h1>
                 <p className="mt-2">
                     <span className="text-[var(--primary)]">Home</span> /
@@ -29,21 +78,26 @@ export default function Gallery() {
                 <h3 className="text-2xl font-bold">Feel the Happiness</h3>
             </section>
 
-            <section className="mx-auto grid max-w-6xl grid-cols-2 gap-4 p-4 sm:grid-cols-3 lg:grid-cols-4">
-                {images.map((src, idx) => (
-                    <div
-                        key={idx}
-                        className="overflow-hidden rounded-md bg-[var(--muted)]"
-                    >
-                        <Image
-                            src={src}
-                            alt={`Gallery ${idx + 1}`}
-                            width={600}
-                            height={400}
-                            className="block h-auto w-full object-contain"
-                        />
-                    </div>
-                ))}
+            {/* Masonry-style collage using CSS columns */}
+            <section className="mx-auto max-w-6xl p-4">
+                <div className="columns-2 gap-4 sm:columns-3 lg:columns-4">
+                    {images.map((img, idx) => (
+                        <div
+                            key={`${img.src}-${idx}`}
+                            className="mb-4 break-inside-avoid overflow-hidden rounded-md bg-[var(--muted)]"
+                        >
+                            <Image
+                                src={img.src}
+                                alt={img.alt}
+                                width={img.width}
+                                height={img.height}
+                                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                                className="block h-auto w-full"
+                                loading="lazy"
+                            />
+                        </div>
+                    ))}
+                </div>
             </section>
 
             <Footer />
