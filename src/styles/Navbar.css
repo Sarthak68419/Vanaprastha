@@ -1,44 +1,43 @@
 .navbar {
-  display: flex;
-  align-items: center;
-  background-color: #2f2f2f;
-  padding: 0.5rem 3rem;
-  position: relative; /* so we can absolutely center the links */
+    display: flex;
+    align-items: center;
+    background-color: #2f2f2f;
+    padding: 0.5rem 3rem;
+    position: relative; /* so we can absolutely center the links */
 }
 
 /* Logo stays on the left */
 .logo_pic {
-  max-height: 50px;   /* logo won’t exceed 50px height */
-  width: auto;        /* keeps proportions */
-  object-fit: contain; /* makes sure it scales nicely */
-  display: block;     /* removes inline gap issues */
+    max-height: 50px; /* logo won’t exceed 50px height */
+    width: auto; /* keeps proportions */
+    object-fit: contain; /* makes sure it scales nicely */
+    display: block; /* removes inline gap issues */
 }
-
 
 /* Center nav-links */
 .nav-links {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2rem;
 }
 
 .nav-link {
-  font-family: "Nunito", sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #fff; /* default white */
-  text-decoration: none;
-  transition: color 0.3s ease;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff; /* default white */
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 /* Highlighted links (orange) */
 .nav-link.highlight {
-  color: #f4a64d; /* soft orange */
+    color: #f4a64d; /* soft orange */
 }
 
 /* Hover effect */
 .nav-link:hover {
-  color: #f4a64d;
+    color: #f4a64d;
 }
