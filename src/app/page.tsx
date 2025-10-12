@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Footer from '../components/Footer';
+import AboutSection from '../components/AboutSection';
 
 export default function Home() {
     return (
@@ -41,43 +42,17 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Welcome Section */}
-            <section className="mx-auto flex max-w-6xl items-center gap-8 p-6">
-                <div className="max-w-1/2 flex-1 overflow-hidden rounded-lg">
-                    <Image
-                        src="/images/home/welcome_collage.jpg"
-                        alt="Caregiver"
-                        width={800}
-                        height={500}
-                        className="block h-[600px] w-full object-cover object-[30%_center]"
-                    />
-                </div>
-                <div className="max-w-xl flex-1">
-                    <span className="text-lg font-medium text-[#f9a825]">
-                        Welcome To Vanaprastha
-                    </span>
-                    <h1 className="mt-2 mb-4 text-3xl leading-tight font-bold text-[#333]">
-                        Your Golden Age Is Made Till The End, Keep A Good Memory
-                    </h1>
-                    <div className="prose prose-neutral max-w-none">
-                        <p className="mb-2 italic">
-                            The best memories of our life can never be captured
-                            in pictures, they are always captured by heart.
-                        </p>
-                        <p className="mb-6">
-                            Your memory is the glue that binds your life
-                            together, everything you are today is because of
-                            your amazing memory.
-                        </p>
-                    </div>
-                    <Link
-                        href="/about"
-                        className="inline-block rounded-md bg-[#f9a825] px-4 py-3 font-medium text-white hover:bg-[#f57f17]"
-                    >
-                        Read More
-                    </Link>
-                </div>
-            </section>
+            {/* Welcome Section (refactored to AboutSection) */}
+            <AboutSection
+                eyebrow="Welcome To Vanaprastha"
+                title="Your Golden Age Is Made Till The End, Keep A Good Memory"
+                lead="The best memories of our life can never be captured in pictures, they are always captured by heart."
+                body={`Your memory is the glue that binds your life together, everything you are today is because of your amazing memory.`}
+                imageSrc="/images/home/welcome_collage.jpg"
+                imageAlt="Caregiver"
+                ctaHref="/about"
+                ctaLabel="Read More"
+            />
 
             {/* Stats Section */}
             <section className="flex justify-around bg-white p-8">
@@ -162,7 +137,7 @@ export default function Home() {
                     Contact Us Easily To Receive A Quote
                 </h2>
                 <p className="mx-auto mt-4 max-w-3xl">
-                    If you're looking for more information on any of our
+                    If you&apos;re looking for more information on any of our
                     services, have a general question about Elderly care, fill
                     out the contact information below and a member of our staff
                     will reach out to you. We look forward to hearing from you.

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Footer from '../../components/Footer';
+import AboutSection from '../../components/AboutSection';
 
 export default function About() {
     return (
@@ -13,36 +14,14 @@ export default function About() {
                 </p>
             </section>
 
-            <section className="mx-auto flex max-w-6xl items-center gap-8 p-6">
-                <div className="flex-1 overflow-hidden rounded-lg">
-                    <Image
-                        src="/images/home/welcome_collage.jpg"
-                        alt="Caregiver"
-                        width={800}
-                        height={500}
-                        className="block h-[600px] w-full object-cover object-[30%_center]"
-                    />
-                </div>
-                <div className="max-w-xl flex-1">
-                    <span className="text-lg font-medium text-[#f9a825]">
-                        Welcome To Vanaprastha
-                    </span>
-                    <h1 className="mt-2 mb-4 text-3xl leading-tight font-bold text-[#333]">
-                        Your Golden Age Is Made Till The End, Keep A Good Memory
-                    </h1>
-                    <div className="prose prose-neutral max-w-none">
-                        <p className="mb-2 italic">
-                            The best memories of our life can never be captured
-                            in pictures, they are always captured by heart.
-                        </p>
-                        <p className="mb-6">
-                            Your memory is the glue that binds your life
-                            together, everything you are today is because of
-                            your amazing memory.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <AboutSection
+                eyebrow="Welcome To Vanaprastha"
+                title="Your Golden Age Is Made Till The End, Keep A Good Memory"
+                lead="The best memories of our life can never be captured in pictures, they are always captured by heart."
+                body={`Your memory is the glue that binds your life together, everything you are today is because of your amazing memory.`}
+                imageSrc="/images/home/welcome_collage.jpg"
+                imageAlt="Caregiver"
+            />
 
             <section className="flex justify-around bg-white p-8">
                 <div className="rounded-xl bg-[#dedede] p-6 text-center font-semibold shadow-md">
@@ -114,7 +93,7 @@ export default function About() {
                         Making The Best Impression On Your Old Age Is Our
                         Happiness
                     </h2>
-                    <p className="mb-6">
+                    <p className="prose mb-6 font-light text-white">
                         Everyone should strive to live the best life possible,
                         and seniors have a unique opportunity to show others how
                         to find happiness throughout the aging process. These
