@@ -1,9 +1,9 @@
 import React from "react";
-import "../styles/Contact.css";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import Image from "next/image";
+import "../../styles/Contact.css";
 
-
-function Contact() {
+export default function Contact() {
   return (
     <div className="contact-container">
       
@@ -23,11 +23,11 @@ function Contact() {
           <h2 className="info-title">Come & Be a Part Of Our New Family</h2>
           <p className="info-desc">
             Elderlycare is an umbrella term for a wide array of services intended to help 
-            older people live as comfortably and independently as possible.
+            older people to live as comfortably and independently as possible.
           </p>
 
           <div className="info-block">
-            <img src="/image/home/clock.jpg" alt="work hours" />
+            <Image src="/images/home/clock.jpg" alt="work hours" width={48} height={48} />
             <div>
               <h4>Work Hours</h4>
               <p>
@@ -39,7 +39,7 @@ function Contact() {
           </div>
 
           <div className="info-block">
-            <img src="/image/home/location.jpg" alt="location" />
+            <Image src="/images/home/location.jpg" alt="location" width={48} height={48} />
             <div>
               <h4>Our Location</h4>
               <p>
@@ -51,7 +51,7 @@ function Contact() {
           </div>
 
           <div className="info-block">
-            <img src="/image/whatsapp.jpg" alt="call" />
+            <Image src="/images/whatsapp.jpg" alt="call" width={48} height={48} />
             <div>
               <h4>Call Now</h4>
               <p>Whatsapp: +91 9010647888<br />Phone: 04035837011</p>
@@ -61,7 +61,7 @@ function Contact() {
           </div>
 
           <div className="info-block">
-            <img src="/image/home/mail.jpg" alt="email" />
+            <Image src="/images/home/mail.jpg" alt="email" width={48} height={48} />
             <div>
               <h4>Our Email</h4>
               <p>ranikoppula.reddy.rk@gmail.com</p>
@@ -88,31 +88,33 @@ function Contact() {
         </div>
       </div>
       
-            {/* Footer */}
-            <footer className="footer">
+      {/* Footer */}
+      <footer className="footer">
         <div className="footer-content">
           {/* Logo */}
-          <img
+          <Image
             src="/images/navbar/logo.jpg"
             alt="Logo"
             className="footer-logo"
+            width={120}
+            height={60}
           />
 
           {/* Nav Links */}
           <ul className="footer-nav">
-            <li><Link to="/home">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/team">Team</Link></li>
-            <li><Link to="/gallery">Gallery</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/about">About Us</Link></li>
+            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/team">Team</Link></li>
+            <li><Link href="/gallery">Gallery</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
           </ul>
 
           {/* Social Icons */}
           <div className="footer-icons">
-            <img src="/images/facebook.jpg" alt="icon" />
-            <img src="/images/twitter.jpg" alt="icon" />
-            <img src="/images/youtube.jpg" alt="icon" />
+            <Image src="/images/facebook.jpg" alt="icon" width={32} height={32} />
+            <Image src="/images/twitter.jpg" alt="icon" width={32} height={32} />
+            <Image src="/images/youtube.jpg" alt="icon" width={32} height={32} />
           </div>
 
           <hr />
@@ -127,5 +129,3 @@ function Contact() {
     </div>
   );
 }
-
-export default Contact;

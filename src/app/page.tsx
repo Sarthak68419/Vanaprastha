@@ -1,21 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import Image from "next/image";
 import "../styles/Home.css";
 
-function Home() {
+export default function Home() {
   return (
     <div className="home-container">
       {/* Hero Section */}
       <div className="hero-section">
-        <img
-          src="images/home/hero.jpg" // Replace with your own image
+        <Image
+          src="/images/home/hero.jpg"
           alt="Caregiver and elderly"
           className="hero-image"
+          width={1200}
+          height={700}
         />
         <div className="hero-content">
           <h1>Making You Feel Special Is Not Our Goal But Our Identity</h1>
           <p className="cta-text">Providing care that comes from the heart, every day.</p>
-          <Link to="/contact" className="cta-button">Get Started</Link>
+          <Link href="/contact" className="cta-button">Get Started</Link>
         </div>
         <div className="hero-floating-box">
           <div className="orange-card">
@@ -30,7 +33,7 @@ function Home() {
       {/* Welcome Section */}
       <div className="welcome-section">
         <div className="welcome-image">
-          <img src="images/home/welcome_collage.jpg" alt="Caregiver" />
+          <Image src="/images/home/welcome_collage.jpg" alt="Caregiver" width={800} height={500} />
         </div>
         <div className="welcome-text">
           <span className="welcome-subtitle">Welcome To Vanaprastha</span>
@@ -45,11 +48,9 @@ function Home() {
             Your memory is the glue that binds your life together, everything you
             are today is because of your amazing memory.
           </p>
-          <Link to="/about" className="welcome-btn">Read More</Link>
+          <Link href="/about" className="welcome-btn">Read More</Link>
         </div>
       </div>
-
-
 
       {/* Stats Section */}
       <div className="stats-section">
@@ -70,14 +71,14 @@ function Home() {
             Everyone should strive to live the best life possible, and seniors have a unique opportunity to show others how to find happiness throughout the aging process. These seven tips are perfect for every senior who wants to live a happy life in old age.
           </p>
           <div className="why-feature">
-            <img src="images/home/stick-images/money.jpg" alt="Reasonable Cost Icon" />
+            <Image src="/images/home/stick-images/money.jpg" alt="Reasonable Cost Icon" width={48} height={48} />
             <div>
               <h3>Reasonable Cost</h3>
               <p>We provide Eldercare services at very reasonable cost.</p>
             </div>
           </div>
           <div className="why-feature">
-            <img src="images/home/stick-images/thumbsup.jpg" alt="Good Quality Services Icon" />
+            <Image src="/images/home/stick-images/thumbsup.jpg" alt="Good Quality Services Icon" width={48} height={48} />
             <div>
               <h3>Good Quality Services</h3>
               <p>
@@ -87,7 +88,7 @@ function Home() {
           </div>
         </div>
         <div className="why-choose-image">
-          <img src="images/home/choose_us.jpg" alt="Caregivers" />
+          <Image src="/images/home/choose_us.jpg" alt="Caregivers" width={600} height={400} />
         </div>
       </div>
 
@@ -95,7 +96,7 @@ function Home() {
       <div className="contact-cta">
         <h2>Contact Us Easily To Receive A Quote</h2>
         <p>
-          If you’re looking for more information on any of our services, have a general
+          If you&apos;re looking for more information on any of our services, have a general
           question about Elderly care, fill out the contact information below and a member of our
           staff will reach out to you. We look forward to hearing from you.
         </p>
@@ -113,8 +114,8 @@ function Home() {
           <h4>Work Hours</h4>
           <div className="work-hours">
             <p>Monday - Sunday</p>
-            <div className="hours-inline">
-              <img src="images/home/clock.jpg" alt="Clock Icon" />
+              <div className="hours-inline">
+              <Image src="/images/home/clock.jpg" alt="Clock Icon" width={40} height={40} />
               <span>Open 24/7 Services on demand</span>
               <small>(Normal: 9:00 AM to 5:00 PM)</small>
             </div>
@@ -122,13 +123,13 @@ function Home() {
 
           <div className="contact-detail">
             <div className="icon-circle">
-              <img src="images/hone/location.jpg" alt="Location Icon" />
+              <Image src="/images/home/location.jpg" alt="Location Icon" width={40} height={40} />
             </div>
             <div>
               <h5>Our Location</h5>
               <p>
-                KVR Hospital Premises  
-                3-5-118/4,16 Shutter X Road, Opposite SYR Swimming Pool, Hyderabad,  
+                KVR Hospital Premises
+                3-5-118/4,16 Shutter X Road, Opposite SYR Swimming Pool, Hyderabad,
                 Attapur, Rajendranagar Mandal, Telangana 500048 India
               </p>
             </div>
@@ -136,7 +137,7 @@ function Home() {
 
           <div className="contact-detail">
             <div className="icon-circle">
-              <img src="images/whatsapp.jpg" alt="Phone Icon" />
+              <Image src="/images/whatsapp.jpg" alt="Phone Icon" width={40} height={40} />
             </div>
             <div>
               <h5>Call Now</h5>
@@ -149,7 +150,7 @@ function Home() {
 
           <div className="contact-detail">
             <div className="icon-circle">
-              <img src="images/home/mail.jpg" alt="Email Icon" />
+              <Image src="/images/home/mail.jpg" alt="Email Icon" width={40} height={40} />
             </div>
             <div>
               <h5>Our Email</h5>
@@ -173,14 +174,13 @@ function Home() {
           <textarea placeholder="Your Message"></textarea>
           <button type="submit">Submit Now</button>
         </form>
-
       </div>
 
       {/* Testimonials Section */}
       <div className="testimonials-section">
         <div className="testimonial-card">
-          <div className="testimonial-image">
-            <img src="images/home/positivemission.jpg" alt="Reviewer" />
+            <div className="testimonial-image">
+            <Image src="/images/home/positivemission.jpg" alt="Reviewer" width={400} height={250} />
             <div className="testimonial-tag">
               Positive Mission Of Helping Vulnerable Older Adults, Cooperative Team
               Environment. Good Combination Of Pay And Time Off
@@ -197,10 +197,12 @@ function Home() {
               of the many obstacles we were going to face.
             </p>
             <div className="reviewer-info">
-              <img
-                src="images/home/johndoe.jpg"
+              <Image
+                src="/images/home/johndoe.jpg"
                 alt="Reviewer"
                 className="reviewer-photo"
+                width={80}
+                height={80}
               />
               <div>
                 <p className="reviewer-name">John Doe</p>
@@ -218,50 +220,48 @@ function Home() {
           The Qualified, Licensed, And Professional Nurses & Doctors You Can Rely On
         </h2>
         <div className="team-collage">
-          <img src="images/home/team.jpg" alt="The Team" />
+          <Image src="/images/home/team.jpg" alt="The Team" width={900} height={400} />
         </div>
-        <Link to="/team" className="btn">Nurses & Doctors</Link>
+        <Link href="/team" className="btn">Nurses & Doctors</Link>
       </div>
-
 
       {/* Footer */}
       <footer className="footer">
         <div className="footer-content">
           {/* Logo */}
-          <img
+          <Image
             src="/images/navbar/logo.jpg"
             alt="Logo"
             className="footer-logo"
+            width={120}
+            height={60}
           />
 
           {/* Nav Links */}
           <ul className="footer-nav">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/team">Team</Link></li>
-            <li><Link to="/gallery">Gallery</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/about">About Us</Link></li>
+            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/team">Team</Link></li>
+            <li><Link href="/gallery">Gallery</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
           </ul>
 
           {/* Social Icons */}
           <div className="footer-icons">
-            <img src="/images/facebook.jpg" alt="icon" />
-            <img src="/images/twitter.jpg" alt="icon" />
-            <img src="/images/youtube.jpg" alt="icon" />
+            <Image src="/images/facebook.jpg" alt="icon" width={32} height={32} />
+            <Image src="/images/twitter.jpg" alt="icon" width={32} height={32} />
+            <Image src="/images/youtube.jpg" alt="icon" width={32} height={32} />
           </div>
 
           <hr />
 
           {/* Copyright */}
           <p className="footer-copy">
-            © 2025 Vanaprastha Care. All rights reserved. 
+            © 2025 Vanaprastha Care. All rights reserved.
           </p>
         </div>
       </footer>
-
     </div>
   );
 }
-
-export default Home;

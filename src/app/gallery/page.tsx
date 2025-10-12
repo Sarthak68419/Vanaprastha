@@ -1,16 +1,16 @@
 import React from "react";
-import "../styles/Gallery.css";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import Image from "next/image";
+import "../../styles/Gallery.css";
 
-
-function Gallery() {
+export default function Gallery() {
   const images = [
     "/images/gallery/gallery1.jpg",
     "/images/gallery/gallery2.jpg",
     "/images/gallery/gallery3.jpeg",
     "/images/gallery/gallery4.jpeg",
     "/images/gallery/gallery5.jpg",
-    "/images/gallery/gallery6.jpg"
+    "/images/gallery/gallery6.jpg",
     "/images/gallery/gallery7.jpg",
     "/images/gallery/gallery8.jpg",
   ];
@@ -35,7 +35,7 @@ function Gallery() {
       <div className="gallery-grid">
         {images.map((src, idx) => (
           <div key={idx} className="gallery-item">
-            <img src={src} alt={`Gallery ${idx + 1}`} />
+            <Image src={src} alt={`Gallery ${idx + 1}`} width={600} height={400} />
           </div>
         ))}
       </div>
@@ -44,27 +44,29 @@ function Gallery() {
       <footer className="footer">
         <div className="footer-content">
           {/* Logo */}
-          <img
+          <Image
             src="/images/navbar/logo.jpg"
             alt="Logo"
             className="footer-logo"
+            width={120}
+            height={60}
           />
 
           {/* Nav Links */}
           <ul className="footer-nav">
-            <li><Link to="/home">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/team">Team</Link></li>
-            <li><Link to="/">Gallery</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/about">About Us</Link></li>
+            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/team">Team</Link></li>
+            <li><Link href="/gallery">Gallery</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
           </ul>
 
           {/* Social Icons */}
           <div className="footer-icons">
-            <img src="/images/facebook.jpg" alt="icon" />
-            <img src="/images/twitter.jpg" alt="icon" />
-            <img src="/images/youtube.jpg" alt="icon" />
+            <Image src="/images/facebook.jpg" alt="icon" width={32} height={32} />
+            <Image src="/images/twitter.jpg" alt="icon" width={32} height={32} />
+            <Image src="/images/youtube.jpg" alt="icon" width={32} height={32} />
           </div>
 
           <hr />
@@ -79,5 +81,3 @@ function Gallery() {
     </div>
   );
 }
-
-export default Gallery;
