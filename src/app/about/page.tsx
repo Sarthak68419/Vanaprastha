@@ -30,15 +30,17 @@ export default function About() {
                     <h1 className="mt-2 mb-4 text-3xl leading-tight font-bold text-[#333]">
                         Your Golden Age Is Made Till The End, Keep A Good Memory
                     </h1>
-                    <p className="mb-2 text-[#555] italic">
-                        The best memories of our life can never be captured in
-                        pictures, they are always captured by heart.
-                    </p>
-                    <p className="mb-6 text-[#666]">
-                        Your memory is the glue that binds your life together,
-                        everything you are today is because of your amazing
-                        memory.
-                    </p>
+                    <div className="prose prose-neutral max-w-none">
+                        <p className="mb-2 italic">
+                            The best memories of our life can never be captured
+                            in pictures, they are always captured by heart.
+                        </p>
+                        <p className="mb-6">
+                            Your memory is the glue that binds your life
+                            together, everything you are today is because of
+                            your amazing memory.
+                        </p>
+                    </div>
                 </div>
             </section>
 

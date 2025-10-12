@@ -59,15 +59,17 @@ export default function Home() {
                     <h1 className="mt-2 mb-4 text-3xl leading-tight font-bold text-[#333]">
                         Your Golden Age Is Made Till The End, Keep A Good Memory
                     </h1>
-                    <p className="mb-2 text-[#555] italic">
-                        The best memories of our life can never be captured in
-                        pictures, they are always captured by heart.
-                    </p>
-                    <p className="mb-6 text-[#666]">
-                        Your memory is the glue that binds your life together,
-                        everything you are today is because of your amazing
-                        memory.
-                    </p>
+                    <div className="prose prose-neutral max-w-none">
+                        <p className="mb-2 italic">
+                            The best memories of our life can never be captured
+                            in pictures, they are always captured by heart.
+                        </p>
+                        <p className="mb-6">
+                            Your memory is the glue that binds your life
+                            together, everything you are today is because of
+                            your amazing memory.
+                        </p>
+                    </div>
                     <Link
                         href="/about"
                         className="inline-block rounded-md bg-[#f9a825] px-4 py-3 font-medium text-white hover:bg-[#f57f17]"

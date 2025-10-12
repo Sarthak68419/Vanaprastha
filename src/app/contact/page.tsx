@@ -14,15 +14,19 @@ export default function Contact() {
 
             <main className="mx-auto grid max-w-6xl grid-cols-1 gap-8 p-8 md:grid-cols-2">
                 <div>
-                    <h4 className="font-bold text-[#f4a825]">Get In Touch</h4>
-                    <h2 className="mt-2 text-3xl font-bold">
-                        Come & Be a Part Of Our New Family
-                    </h2>
-                    <p className="mt-4 text-[#666]">
-                        Elderlycare is an umbrella term for a wide array of
-                        services intended to help older people to live as
-                        comfortably and independently as possible.
-                    </p>
+                    <div className="prose prose-neutral max-w-none">
+                        <h4 className="font-bold text-[#f4a825]">
+                            Get In Touch
+                        </h4>
+                        <h2 className="mt-2 text-3xl font-bold">
+                            Come & Be a Part Of Our New Family
+                        </h2>
+                        <p className="mt-4">
+                            Elderlycare is an umbrella term for a wide array of
+                            services intended to help older people to live as
+                            comfortably and independently as possible.
+                        </p>
+                    </div>
 
                     <div className="mt-6 flex items-start gap-4">
                         <Image

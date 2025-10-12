@@ -127,3 +127,15 @@
             Arial;
     }
 }
+
+/* Typography (prose) sensible defaults and dark mode adjustments */
+@layer components {
+    .prose {
+        /* make sure typography respects CSS color variables used in project */
+        color: var(--foreground);
+    }
+
+    .prose a {
+        color: var(--primary);
+    }
+}

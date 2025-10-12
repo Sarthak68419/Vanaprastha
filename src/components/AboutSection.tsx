@@ -41,10 +41,10 @@ export default function AboutSection({
                 <h1 className="mt-2 mb-4 text-3xl leading-tight font-bold text-[#333]">
                     {title}
                 </h1>
-                {lead ? (
-                    <p className="mb-2 text-[#555] italic">{lead}</p>
-                ) : null}
-                {body ? <p className="mb-6 text-[#666]">{body}</p> : null}
+                <div className="prose prose-neutral max-w-none">
+                    {lead ? <p className="mb-2 italic">{lead}</p> : null}
+                    {body ? <p className="mb-6">{body}</p> : null}
+                </div>
                 {ctaHref && ctaLabel ? (
                     <Link
                         href={ctaHref}
