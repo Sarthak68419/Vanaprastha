@@ -4,21 +4,21 @@ import Footer from '../../components/Footer';
 
 export default function Contact() {
     return (
-        <div className="text-[#2f2f2f] bg-white">
-            <section className="bg-[#2f2f2f] text-white text-center py-16">
+        <div className="bg-white text-[#2f2f2f]">
+            <section className="bg-[#2f2f2f] py-16 text-center text-white">
                 <h1 className="text-4xl font-bold">Contact</h1>
                 <p className="mt-2">
                     <span className="text-[#f4a825]">Home</span> / Contact
                 </p>
             </section>
 
-            <main className="max-w-6xl mx-auto p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <main className="mx-auto grid max-w-6xl grid-cols-1 gap-8 p-8 md:grid-cols-2">
                 <div>
-                    <h4 className="text-[#f4a825] font-bold">Get In Touch</h4>
-                    <h2 className="text-3xl font-bold mt-2">
+                    <h4 className="font-bold text-[#f4a825]">Get In Touch</h4>
+                    <h2 className="mt-2 text-3xl font-bold">
                         Come & Be a Part Of Our New Family
                     </h2>
-                    <p className="text-[#666] mt-4">
+                    <p className="mt-4 text-[#666]">
                         Elderlycare is an umbrella term for a wide array of
                         services intended to help older people to live as
                         comfortably and independently as possible.
@@ -102,47 +102,47 @@ export default function Contact() {
                 </div>
 
                 <div>
-                    <form className="flex flex-col gap-4 bg-white rounded-lg p-6 shadow-md">
+                    <form className="flex flex-col gap-4 rounded-lg bg-white p-6 shadow-md">
                         <div className="flex gap-4">
                             <input
-                                className="flex-1 p-3 border rounded-md"
+                                className="flex-1 rounded-md border p-3"
                                 type="text"
                                 placeholder="First name here"
                             />
                             <input
-                                className="flex-1 p-3 border rounded-md"
+                                className="flex-1 rounded-md border p-3"
                                 type="text"
                                 placeholder="Last name here"
                             />
                         </div>
                         <div className="flex gap-4">
                             <input
-                                className="flex-1 p-3 border rounded-md"
+                                className="flex-1 rounded-md border p-3"
                                 type="text"
                                 placeholder="Mobile number here"
                             />
                             <input
-                                className="flex-1 p-3 border rounded-md"
+                                className="flex-1 rounded-md border p-3"
                                 type="email"
                                 placeholder="Add email"
                             />
                         </div>
                         <input
-                            className="p-3 border rounded-md"
+                            className="rounded-md border p-3"
                             type="text"
                             placeholder="Enter Area"
                         />
                         <input
-                            className="p-3 border rounded-md"
+                            className="rounded-md border p-3"
                             type="text"
                             placeholder="How can we help you?"
                         />
                         <textarea
-                            className="p-3 border rounded-md min-h-[120px] resize-y"
+                            className="min-h-[120px] resize-y rounded-md border p-3"
                             placeholder="Your Message"
                         ></textarea>
                         <button
-                            className="bg-[#f4a825] text-white font-bold px-4 py-3 rounded-md"
+                            className="rounded-md bg-[#f4a825] px-4 py-3 font-bold text-white"
                             type="submit"
                         >
                             Submit Now

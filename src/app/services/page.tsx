@@ -5,25 +5,25 @@ import Footer from '../../components/Footer';
 export default function Services() {
     return (
         <div className="bg-white text-[#333]">
-            <section className="bg-[#2f2f2f] text-white text-center py-16">
+            <section className="bg-[#2f2f2f] py-16 text-center text-white">
                 <h1 className="text-4xl font-bold">Services</h1>
                 <p className="mt-2">
                     <span className="text-[#f4a825]">Home</span> / Services
                 </p>
             </section>
 
-            <main className="max-w-6xl mx-auto p-8 text-center">
+            <main className="mx-auto max-w-6xl p-8 text-center">
                 <h4 className="text-[#f4a825]">Services</h4>
-                <h2 className="text-3xl font-bold mt-2">
+                <h2 className="mt-2 text-3xl font-bold">
                     You Are In Good Hands
                 </h2>
-                <p className="text-[#666] max-w-2xl mx-auto mt-4">
+                <p className="mx-auto mt-4 max-w-2xl text-[#666]">
                     It is a great idea to have collaboration with Vanaprastha to
                     take care of your loved one (Parents) in our safe hands in
                     your absence
                 </p>
 
-                <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div className="mx-auto mt-8 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {[
                         {
                             icon: '💊',
@@ -58,12 +58,12 @@ export default function Services() {
                     ].map((s) => (
                         <div
                             key={s.title}
-                            className="bg-white p-8 rounded-lg shadow-md hover:translate-y-[-4px] transition"
+                            className="rounded-lg bg-white p-8 shadow-md transition hover:translate-y-[-4px]"
                         >
-                            <div className="bg-[#f4a825] text-white text-2xl w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#f4a825] text-2xl text-white">
                                 {s.icon}
                             </div>
-                            <h3 className="text-xl font-semibold mb-2">
+                            <h3 className="mb-2 text-xl font-semibold">
                                 {s.title}
                             </h3>
                             <p className="text-sm text-[#666]">{s.desc}</p>
@@ -73,7 +73,7 @@ export default function Services() {
             </main>
 
             <section className="p-16">
-                <div className="max-w-4xl mx-auto flex gap-8 items-center">
+                <div className="mx-auto flex max-w-4xl items-center gap-8">
                     <div className="relative flex-1">
                         <Image
                             src="/images/home/positivemission.jpg"
@@ -82,21 +82,21 @@ export default function Services() {
                             height={250}
                             className="w-full rounded-lg"
                         />
-                        <div className="absolute -bottom-5 left-5 bg-[#f5a623] text-white p-4 rounded-md max-w-[85%] shadow-lg text-sm">
+                        <div className="absolute -bottom-5 left-5 max-w-[85%] rounded-md bg-[#f5a623] p-4 text-sm text-white shadow-lg">
                             Positive Mission Of Helping Vulnerable Older Adults,
                             Cooperative Team Environment. Good Combination Of
                             Pay And Time Off
                         </div>
                     </div>
                     <div className="flex-1">
-                        <p className="text-[#f5a623] font-medium mb-2">
+                        <p className="mb-2 font-medium text-[#f5a623]">
                             Testimonial
                         </p>
-                        <h2 className="text-2xl mb-4">
+                        <h2 className="mb-4 text-2xl">
                             What They Say About Us ?
                         </h2>
-                        <div className="text-[#f5a623] text-xl mb-4">★★★★★</div>
-                        <p className="text-[#666] leading-relaxed mb-6">
+                        <div className="mb-4 text-xl text-[#f5a623]">★★★★★</div>
+                        <p className="mb-6 leading-relaxed text-[#666]">
                             Without the help of Vanaprastha there is no way we
                             could have gracefully navigated our way through the
                             last couple of years. We thought we were prepared

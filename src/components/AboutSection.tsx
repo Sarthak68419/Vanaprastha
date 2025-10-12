@@ -24,31 +24,31 @@ export default function AboutSection({
     ctaLabel,
 }: Props) {
     return (
-        <section className="flex items-center p-6 max-w-6xl mx-auto gap-8">
+        <section className="mx-auto flex max-w-6xl items-center gap-8 p-6">
             <div className="flex-1 overflow-hidden rounded-lg">
                 <Image
                     src={imageSrc}
                     alt={imageAlt}
                     width={800}
                     height={500}
-                    className="block w-full h-[600px] object-cover object-[30%_center]"
+                    className="block h-[600px] w-full object-cover object-[30%_center]"
                 />
             </div>
-            <div className="flex-1 max-w-xl">
-                <span className="text-[#f9a825] text-lg font-medium">
+            <div className="max-w-xl flex-1">
+                <span className="text-lg font-medium text-[#f9a825]">
                     {eyebrow}
                 </span>
-                <h1 className="text-3xl font-bold text-[#333] leading-tight mt-2 mb-4">
+                <h1 className="mt-2 mb-4 text-3xl leading-tight font-bold text-[#333]">
                     {title}
                 </h1>
                 {lead ? (
-                    <p className="text-[#555] italic mb-2">{lead}</p>
+                    <p className="mb-2 text-[#555] italic">{lead}</p>
                 ) : null}
-                {body ? <p className="text-[#666] mb-6">{body}</p> : null}
+                {body ? <p className="mb-6 text-[#666]">{body}</p> : null}
                 {ctaHref && ctaLabel ? (
                     <Link
                         href={ctaHref}
-                        className="inline-block bg-[#f9a825] text-white px-4 py-3 rounded-md font-medium hover:bg-[#f57f17]"
+                        className="inline-block rounded-md bg-[#f9a825] px-4 py-3 font-medium text-white hover:bg-[#f57f17]"
                     >
                         {ctaLabel}
                     </Link>

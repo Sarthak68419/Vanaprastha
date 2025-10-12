@@ -5,36 +5,36 @@ import Footer from '../../components/Footer';
 
 export default function About() {
     return (
-        <div className="text-[#2f2f2f] bg-white">
-            <section className="bg-[#2f2f2f] text-white text-center py-16">
+        <div className="bg-white text-[#2f2f2f]">
+            <section className="bg-[#2f2f2f] py-16 text-center text-white">
                 <h1 className="text-4xl font-bold">About Us</h1>
                 <p className="mt-2">
                     <span className="text-[#f4a825]">Home</span> / About Us
                 </p>
             </section>
 
-            <section className="flex items-center p-6 max-w-6xl mx-auto gap-8">
+            <section className="mx-auto flex max-w-6xl items-center gap-8 p-6">
                 <div className="flex-1 overflow-hidden rounded-lg">
                     <Image
                         src="/images/home/welcome_collage.jpg"
                         alt="Caregiver"
                         width={800}
                         height={500}
-                        className="block w-full h-[600px] object-cover object-[30%_center]"
+                        className="block h-[600px] w-full object-cover object-[30%_center]"
                     />
                 </div>
-                <div className="flex-1 max-w-xl">
-                    <span className="text-[#f9a825] text-lg font-medium">
+                <div className="max-w-xl flex-1">
+                    <span className="text-lg font-medium text-[#f9a825]">
                         Welcome To Vanaprastha
                     </span>
-                    <h1 className="text-3xl font-bold text-[#333] leading-tight mt-2 mb-4">
+                    <h1 className="mt-2 mb-4 text-3xl leading-tight font-bold text-[#333]">
                         Your Golden Age Is Made Till The End, Keep A Good Memory
                     </h1>
-                    <p className="text-[#555] italic mb-2">
+                    <p className="mb-2 text-[#555] italic">
                         The best memories of our life can never be captured in
                         pictures, they are always captured by heart.
                     </p>
-                    <p className="text-[#666] mb-6">
+                    <p className="mb-6 text-[#666]">
                         Your memory is the glue that binds your life together,
                         everything you are today is because of your amazing
                         memory.
@@ -42,27 +42,27 @@ export default function About() {
                 </div>
             </section>
 
-            <section className="flex justify-around p-8 bg-white">
-                <div className="bg-[#dedede] p-6 rounded-xl shadow-md text-center font-semibold">
+            <section className="flex justify-around bg-white p-8">
+                <div className="rounded-xl bg-[#dedede] p-6 text-center font-semibold shadow-md">
                     500+ Happy Elders
                 </div>
-                <div className="bg-[#dedede] p-6 rounded-xl shadow-md text-center font-semibold">
+                <div className="rounded-xl bg-[#dedede] p-6 text-center font-semibold shadow-md">
                     50+ Caregivers
                 </div>
-                <div className="bg-[#dedede] p-6 rounded-xl shadow-md text-center font-semibold">
+                <div className="rounded-xl bg-[#dedede] p-6 text-center font-semibold shadow-md">
                     20+ Hospitals
                 </div>
-                <div className="bg-[#dedede] p-6 rounded-xl shadow-md text-center font-semibold">
+                <div className="rounded-xl bg-[#dedede] p-6 text-center font-semibold shadow-md">
                     35+ Medical Support
                 </div>
             </section>
 
-            <section className="vision-mission bg-[#f4b160] p-16 flex flex-wrap gap-8">
-                <div className="flex-1 min-w-[280px] text-white">
-                    <h4 className="text-lg font-medium mb-2">
+            <section className="vision-mission flex flex-wrap gap-8 bg-[#f4b160] p-16">
+                <div className="min-w-[280px] flex-1 text-white">
+                    <h4 className="mb-2 text-lg font-medium">
                         Vision & Mission
                     </h4>
-                    <h2 className="text-3xl font-bold leading-tight mb-4 text-balance">
+                    <h2 className="mb-4 text-3xl leading-tight font-bold text-balance">
                         WE ARE LIKE SHOULDER SUPPORT FOR YOUR ELDERS
                     </h2>
                     <p className="font-light">
@@ -71,8 +71,8 @@ export default function About() {
                     </p>
                 </div>
 
-                <div className="flex-1 min-w-[300px] flex gap-4">
-                    <div className="bg-white rounded-xl p-6 w-56 shadow-md text-center">
+                <div className="flex min-w-[300px] flex-1 gap-4">
+                    <div className="w-56 rounded-xl bg-white p-6 text-center shadow-md">
                         <Image
                             src="/images/about/vision.jpg"
                             alt="vision icon"
@@ -87,7 +87,7 @@ export default function About() {
                         </p>
                     </div>
 
-                    <div className="bg-white rounded-xl p-6 w-56 shadow-md text-center">
+                    <div className="w-56 rounded-xl bg-white p-6 text-center shadow-md">
                         <Image
                             src="/images/about/mission.jpg"
                             alt="mission icon"
@@ -106,9 +106,9 @@ export default function About() {
 
             {/* Why Choose Us */}
             <section className="flex flex-wrap items-stretch bg-white">
-                <div className="flex-1 bg-[#e8b569] text-white p-12 rounded-tr-[40px] rounded-br-[40px] flex flex-col justify-center">
-                    <h4 className="text-base mb-2">Why Choose Us</h4>
-                    <h2 className="text-2xl font-bold mb-4 leading-tight">
+                <div className="flex flex-1 flex-col justify-center rounded-tr-[40px] rounded-br-[40px] bg-[#e8b569] p-12 text-white">
+                    <h4 className="mb-2 text-base">Why Choose Us</h4>
+                    <h2 className="mb-4 text-2xl leading-tight font-bold">
                         Making The Best Impression On Your Old Age Is Our
                         Happiness
                     </h2>
@@ -120,7 +120,7 @@ export default function About() {
                         live a happy life in old age.
                     </p>
 
-                    <div className="flex items-start gap-4 mb-4">
+                    <div className="mb-4 flex items-start gap-4">
                         <Image
                             src="/images/home/stick-images/money.jpg"
                             alt="Reasonable Cost Icon"
@@ -160,29 +160,29 @@ export default function About() {
                         alt="Caregivers"
                         width={600}
                         height={400}
-                        className="w-full h-full object-cover"
+                        className="h-full w-full object-cover"
                     />
                 </div>
             </section>
 
-            <section className="text-center p-16 bg-[#f9f9f9]">
+            <section className="bg-[#f9f9f9] p-16 text-center">
                 <p className="text-[#e4a85f]">Our Lovely Team</p>
-                <h2 className="text-2xl font-bold max-w-2xl mx-auto mt-2 mb-6">
+                <h2 className="mx-auto mt-2 mb-6 max-w-2xl text-2xl font-bold">
                     The Qualified, Licensed, And Professional Nurses & Doctors
                     You Can Rely On
                 </h2>
-                <div className="max-w-4xl mx-auto mb-6">
+                <div className="mx-auto mb-6 max-w-4xl">
                     <Image
                         src="/images/home/team.jpg"
                         alt="The Team"
                         width={900}
                         height={400}
-                        className="w-full h-auto"
+                        className="h-auto w-full"
                     />
                 </div>
                 <Link
                     href="/team"
-                    className="inline-block bg-[#fbb03b] text-white px-6 py-3 rounded-md font-semibold hover:bg-[#e09c2d]"
+                    className="inline-block rounded-md bg-[#fbb03b] px-6 py-3 font-semibold text-white hover:bg-[#e09c2d]"
                 >
                     Nurses & Doctors
                 </Link>
