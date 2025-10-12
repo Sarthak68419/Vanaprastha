@@ -56,7 +56,7 @@ export default function Team() {
                             height={240}
                             className="h-[380px] w-full object-cover"
                         />
-                        <div className="bg-card text-card-foreground mx-6 -mt-6 rounded-lg p-4 text-center shadow-md">
+                        <div className="bg-card text-card-foreground mx-6 -mt-2 p-4 text-center">
                             <h4 className="text-primary mb-1 text-lg font-bold">
                                 {m.name}
                             </h4>
