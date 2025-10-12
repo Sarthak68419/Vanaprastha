@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Footer from '../../components/Footer';
 import ContactForm from '@/components/ContactForm';
+import { MapPin, Phone, Mail } from 'lucide-react';
 
 export default function Contact() {
     return (
@@ -18,7 +19,7 @@ export default function Contact() {
                     <div className="prose prose-neutral max-w-none">
                         <h4 className="text-primary font-bold">Get In Touch</h4>
                         <h2 className="mt-2 text-3xl font-bold">
-                            Come & Be a Part Of Our New Family
+                            Come and be a part of our New Family
                         </h2>
                         <p className="mt-4">
                             Elderlycare is an umbrella term for a wide array of
@@ -47,12 +48,9 @@ export default function Contact() {
                     </div>
 
                     <div className="mt-6 flex items-start gap-4">
-                        <Image
-                            src="/images/home/location.jpg"
-                            alt="location"
-                            width={48}
-                            height={48}
-                        />
+                        <div className="bg-primary text-primary-foreground flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full">
+                            <MapPin className="h-6 w-6" aria-hidden />
+                        </div>
                         <div>
                             <h4 className="font-semibold">Our Location</h4>
                             <p className="text-sm">
@@ -65,12 +63,9 @@ export default function Contact() {
                     </div>
 
                     <div className="mt-6 flex items-start gap-4">
-                        <Image
-                            src="/images/whatsapp.jpg"
-                            alt="call"
-                            width={48}
-                            height={48}
-                        />
+                        <div className="bg-primary text-primary-foreground flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full">
+                            <Phone className="h-6 w-6" aria-hidden />
+                        </div>
                         <div>
                             <h4 className="font-semibold">Call Now</h4>
                             <p className="text-sm">
@@ -89,12 +84,9 @@ export default function Contact() {
                     </div>
 
                     <div className="mt-6 flex items-start gap-4">
-                        <Image
-                            src="/images/home/mail.jpg"
-                            alt="email"
-                            width={48}
-                            height={48}
-                        />
+                        <div className="bg-primary text-primary-foreground flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full">
+                            <Mail className="h-6 w-6" aria-hidden />
+                        </div>
                         <div>
                             <h4 className="font-semibold">Our Email</h4>
                             <p className="text-sm">

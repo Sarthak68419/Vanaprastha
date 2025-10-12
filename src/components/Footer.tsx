@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Facebook, Twitter, Youtube } from 'lucide-react';
 
 export default function Footer() {
     return (
@@ -52,25 +53,28 @@ export default function Footer() {
                     </li>
                 </ul>
 
-                <div className="mb-6 flex justify-center gap-6">
-                    <Image
-                        src="/images/facebook.jpg"
-                        alt="facebook"
-                        width={32}
-                        height={32}
-                    />
-                    <Image
-                        src="/images/twitter.jpg"
-                        alt="twitter"
-                        width={32}
-                        height={32}
-                    />
-                    <Image
-                        src="/images/youtube.jpg"
-                        alt="youtube"
-                        width={32}
-                        height={32}
-                    />
+                <div className="text-background mb-6 flex justify-center gap-6">
+                    <a
+                        href="#"
+                        aria-label="Facebook"
+                        className="rounded-full p-2 hover:opacity-90"
+                    >
+                        <Facebook className="h-8 w-8" />
+                    </a>
+                    <a
+                        href="#"
+                        aria-label="Twitter"
+                        className="rounded-full p-2 hover:opacity-90"
+                    >
+                        <Twitter className="h-8 w-8" />
+                    </a>
+                    <a
+                        href="#"
+                        aria-label="YouTube"
+                        className="rounded-full p-2 hover:opacity-90"
+                    >
+                        <Youtube className="h-8 w-8" />
+                    </a>
                 </div>
 
                 <hr className="border-border/50 mx-auto my-6 w-3/4 border-t" />

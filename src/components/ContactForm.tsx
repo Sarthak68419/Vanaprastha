@@ -21,7 +21,7 @@ const contactSchema = z.object({
     firstName: z.string().min(1, 'Required'),
     lastName: z.string().optional(),
     phone: z.string().min(1, 'Required'),
-    email: z.string().email('Invalid email').optional(),
+    email: z.email('Invalid email').optional(),
     area: z.string().optional(),
     subject: z.string().optional(),
     message: z.string().optional(),

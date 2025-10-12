@@ -6,6 +6,7 @@ import AboutSection from '../components/AboutSection';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import ContactForm from '@/components/ContactForm';
+import { MapPin, Phone, Mail } from 'lucide-react';
 
 export default function Home() {
     return (
@@ -147,7 +148,7 @@ export default function Home() {
             <section className="mx-auto -mt-16 grid max-w-6xl grid-cols-1 gap-6 p-6 md:grid-cols-2">
                 <div className="bg-card text-card-foreground rounded-lg p-8 shadow-lg">
                     <h3 className="text-xl font-bold">
-                        Come & Be A Part Of Our New Family, Follow Your Dream
+                        Come and be a part of our New Family
                     </h3>
                     <p className="text-muted-foreground mt-3">
                         VANAPRASTHA is an umbrella term for a wide array of
@@ -176,12 +177,7 @@ export default function Home() {
 
                     <div className="mt-6 flex items-start gap-4">
                         <div className="bg-primary text-primary-foreground flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full">
-                            <Image
-                                src="/images/home/location.jpg"
-                                alt="Location Icon"
-                                width={24}
-                                height={24}
-                            />
+                            <MapPin className="h-6 w-6" aria-hidden />
                         </div>
                         <div>
                             <h5 className="font-semibold">Our Location</h5>
@@ -196,12 +192,7 @@ export default function Home() {
 
                     <div className="mt-6 flex items-start gap-4">
                         <div className="bg-primary text-primary-foreground flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full">
-                            <Image
-                                src="/images/whatsapp.jpg"
-                                alt="Phone Icon"
-                                width={24}
-                                height={24}
-                            />
+                            <Phone className="h-6 w-6" aria-hidden />
                         </div>
                         <div>
                             <h5 className="font-semibold">Call Now</h5>
@@ -214,12 +205,7 @@ export default function Home() {
 
                     <div className="mt-6 flex items-start gap-4">
                         <div className="bg-primary text-primary-foreground flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full">
-                            <Image
-                                src="/images/home/mail.jpg"
-                                alt="Email Icon"
-                                width={24}
-                                height={24}
-                            />
+                            <Mail className="h-6 w-6" aria-hidden />
                         </div>
                         <div>
                             <h5 className="font-semibold">Our Email</h5>
