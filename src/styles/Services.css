@@ -1,5 +1,4 @@
 .services-container {
-    font-family: 'Arial', sans-serif;
     background-color: #fff;
 }
 
@@ -92,7 +91,6 @@
     padding: 60px 20px;
     display: flex;
     justify-content: center;
-    font-family: Arial, sans-serif;
 }
 
 .testimonial-card {

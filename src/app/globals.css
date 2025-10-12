@@ -116,5 +116,14 @@
     }
     body {
         @apply bg-background text-foreground;
+        /* Use DM Sans variable injected via next/font in layout.tsx */
+        font-family:
+            var(--font-dm-sans),
+            system-ui,
+            -apple-system,
+            'Segoe UI',
+            Roboto,
+            'Helvetica Neue',
+            Arial;
     }
 }
