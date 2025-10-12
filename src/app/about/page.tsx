@@ -1,9 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import Footer from '../../components/Footer';
 import AboutSection from '../../components/AboutSection';
-import { Button } from '@/components/ui/button';
+import WhyChooseUs from '../components/WhyChooseUs';
+import TeamSection from '../components/TeamSection';
 
 export default function About() {
     return (
@@ -86,89 +86,8 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Why Choose Us */}
-            <section className="bg-background flex flex-wrap items-stretch">
-                <div className="bg-primary text-primary-foreground flex flex-1 flex-col justify-center rounded-tr-[40px] rounded-br-[40px] p-12">
-                    <h4 className="mb-2 text-base">Why Choose Us</h4>
-                    <h2 className="mb-4 text-2xl leading-tight font-bold">
-                        Making The Best Impression On Your Old Age Is Our
-                        Happiness
-                    </h2>
-                    <p className="prose text-primary-foreground/90 mb-6 font-light">
-                        Everyone should strive to live the best life possible,
-                        and seniors have a unique opportunity to show others how
-                        to find happiness throughout the aging process. These
-                        seven tips are perfect for every senior who wants to
-                        live a happy life in old age.
-                    </p>
-
-                    <div className="mb-4 flex items-start gap-4">
-                        <Image
-                            src="/images/home/stick-images/money.jpg"
-                            alt="Reasonable Cost Icon"
-                            width={48}
-                            height={48}
-                        />
-                        <div>
-                            <h3 className="text-lg">Reasonable Cost</h3>
-                            <p>
-                                We provide Eldercare services at very reasonable
-                                cost.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="flex items-start gap-4">
-                        <Image
-                            src="/images/home/stick-images/thumbsup.jpg"
-                            alt="Good Quality Services Icon"
-                            width={48}
-                            height={48}
-                        />
-                        <div>
-                            <h3 className="text-lg">Good Quality Services</h3>
-                            <p>
-                                Seniors can join our centres for just a few days
-                                a week, and we can cater for ad-hoc and
-                                short-term flexible care arrangements where
-                                needed.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div className="flex-1">
-                    <Image
-                        src="/images/home/choose_us.jpg"
-                        alt="Caregivers"
-                        width={600}
-                        height={400}
-                        className="h-full w-full object-cover"
-                    />
-                </div>
-            </section>
-
-            <section className="bg-secondary p-16 text-center">
-                <p className="text-primary">Our Lovely Team</p>
-                <h2 className="mx-auto mt-2 mb-6 max-w-2xl text-2xl font-bold">
-                    The Qualified, Licensed, And Professional Nurses & Doctors
-                    You Can Rely On
-                </h2>
-                <div className="mx-auto mb-6 max-w-4xl">
-                    <Image
-                        src="/images/home/team.jpg"
-                        alt="The Team"
-                        width={900}
-                        height={400}
-                        className="h-auto w-full"
-                    />
-                </div>
-                <Button
-                    asChild
-                    className="inline-block font-semibold hover:opacity-90"
-                >
-                    <Link href="/team">Nurses & Doctors</Link>
-                </Button>
-            </section>
+            <WhyChooseUs />
+            <TeamSection />
 
             <Footer />
         </div>
