@@ -19,8 +19,8 @@ export default function Services() {
                 </h2>
                 <p className="text-muted-foreground mx-auto mt-4 max-w-2xl">
                     It is a great idea to have collaboration with Vanaprastha to
-                    take care of your loved one (Parents) in our safe hands in
-                    your absence
+                    take care of your loved one in our safe hands in your
+                    absence
                 </p>
 
                 <div className="mx-auto mt-8 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -66,7 +66,7 @@ export default function Services() {
                             <h3 className="mb-2 text-xl font-semibold">
                                 {s.title}
                             </h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground prose text-sm">
                                 {s.desc}
                             </p>
                         </div>
