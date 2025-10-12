@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Footer() {
     return (
-        <footer className="bg-[#8a7865] py-10 text-center text-white">
+        <footer className="bg-foreground text-background py-10 text-center">
             <div className="mx-auto max-w-6xl px-6">
                 <div className="mb-6">
                     <Image
@@ -73,7 +73,7 @@ export default function Footer() {
                     />
                 </div>
 
-                <hr className="mx-auto my-6 w-3/4 border-t border-white/20" />
+                <hr className="border-border/50 mx-auto my-6 w-3/4 border-t" />
 
                 <p className="text-sm">
                     © 2025 Vanaprastha Care. All rights reserved.

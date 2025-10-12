@@ -4,20 +4,20 @@ import Footer from '../../components/Footer';
 
 export default function Services() {
     return (
-        <div className="bg-white text-[#333]">
-            <section className="bg-[#2f2f2f] py-16 text-center text-white">
+        <div className="bg-background text-foreground">
+            <section className="bg-foreground text-background py-16 text-center">
                 <h1 className="text-4xl font-bold">Services</h1>
                 <p className="mt-2">
-                    <span className="text-[#f4a825]">Home</span> / Services
+                    <span className="text-primary">Home</span> / Services
                 </p>
             </section>
 
             <main className="mx-auto max-w-6xl p-8 text-center">
-                <h4 className="text-[#f4a825]">Services</h4>
+                <h4 className="text-primary">Services</h4>
                 <h2 className="mt-2 text-3xl font-bold">
                     You Are In Good Hands
                 </h2>
-                <p className="mx-auto mt-4 max-w-2xl text-[#666]">
+                <p className="text-muted-foreground mx-auto mt-4 max-w-2xl">
                     It is a great idea to have collaboration with Vanaprastha to
                     take care of your loved one (Parents) in our safe hands in
                     your absence
@@ -58,15 +58,17 @@ export default function Services() {
                     ].map((s) => (
                         <div
                             key={s.title}
-                            className="rounded-lg bg-white p-8 shadow-md transition hover:translate-y-[-4px]"
+                            className="bg-card text-card-foreground rounded-lg p-8 shadow-md transition hover:translate-y-[-4px]"
                         >
-                            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#f4a825] text-2xl text-white">
+                            <div className="bg-primary text-primary-foreground mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full text-2xl">
                                 {s.icon}
                             </div>
                             <h3 className="mb-2 text-xl font-semibold">
                                 {s.title}
                             </h3>
-                            <p className="text-sm text-[#666]">{s.desc}</p>
+                            <p className="text-muted-foreground text-sm">
+                                {s.desc}
+                            </p>
                         </div>
                     ))}
                 </div>
@@ -82,21 +84,21 @@ export default function Services() {
                             height={250}
                             className="w-full rounded-lg"
                         />
-                        <div className="absolute -bottom-5 left-5 max-w-[85%] rounded-md bg-[#f5a623] p-4 text-sm text-white shadow-lg">
+                        <div className="bg-primary text-primary-foreground absolute -bottom-5 left-5 max-w-[85%] rounded-md p-4 text-sm shadow-lg">
                             Positive Mission Of Helping Vulnerable Older Adults,
                             Cooperative Team Environment. Good Combination Of
                             Pay And Time Off
                         </div>
                     </div>
                     <div className="flex-1">
-                        <p className="mb-2 font-medium text-[#f5a623]">
+                        <p className="text-primary mb-2 font-medium">
                             Testimonial
                         </p>
                         <h2 className="mb-4 text-2xl">
                             What They Say About Us ?
                         </h2>
-                        <div className="mb-4 text-xl text-[#f5a623]">★★★★★</div>
-                        <p className="mb-6 leading-relaxed text-[#666]">
+                        <div className="text-primary mb-4 text-xl">★★★★★</div>
+                        <p className="text-muted-foreground mb-6 leading-relaxed">
                             Without the help of Vanaprastha there is no way we
                             could have gracefully navigated our way through the
                             last couple of years. We thought we were prepared
@@ -114,7 +116,7 @@ export default function Services() {
                             />
                             <div>
                                 <p className="font-bold">John Doe</p>
-                                <p className="text-sm text-[#888]">
+                                <p className="text-muted-foreground text-sm">
                                     Designation
                                 </p>
                             </div>

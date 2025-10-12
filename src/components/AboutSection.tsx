@@ -35,10 +35,10 @@ export default function AboutSection({
                 />
             </div>
             <div className="max-w-xl flex-1">
-                <span className="text-lg font-medium text-[#f9a825]">
+                <span className="text-primary text-lg font-medium">
                     {eyebrow}
                 </span>
-                <h1 className="mt-2 mb-4 text-3xl leading-tight font-bold text-[#333]">
+                <h1 className="text-foreground mt-2 mb-4 text-3xl leading-tight font-bold">
                     {title}
                 </h1>
                 <div className="prose prose-neutral max-w-none">
@@ -48,7 +48,7 @@ export default function AboutSection({
                 {ctaHref && ctaLabel ? (
                     <Link
                         href={ctaHref}
-                        className="inline-block rounded-md bg-[#f9a825] px-4 py-3 font-medium text-white hover:bg-[#f57f17]"
+                        className="bg-primary text-primary-foreground inline-block rounded-md px-4 py-3 font-medium hover:opacity-90"
                     >
                         {ctaLabel}
                     </Link>

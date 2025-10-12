@@ -6,11 +6,11 @@ import AboutSection from '../../components/AboutSection';
 
 export default function About() {
     return (
-        <div className="bg-white text-[#2f2f2f]">
-            <section className="bg-[#2f2f2f] py-16 text-center text-white">
+        <div className="bg-background text-foreground">
+            <section className="bg-foreground text-background py-16 text-center">
                 <h1 className="text-4xl font-bold">About Us</h1>
                 <p className="mt-2">
-                    <span className="text-[#f4a825]">Home</span> / About Us
+                    <span className="text-primary">Home</span> / About Us
                 </p>
             </section>
 
@@ -23,23 +23,23 @@ export default function About() {
                 imageAlt="Caregiver"
             />
 
-            <section className="flex justify-around bg-white p-8">
-                <div className="rounded-xl bg-[#dedede] p-6 text-center font-semibold shadow-md">
+            <section className="bg-background flex justify-around p-8">
+                <div className="bg-secondary rounded-xl p-6 text-center font-semibold shadow-md">
                     500+ Happy Elders
                 </div>
-                <div className="rounded-xl bg-[#dedede] p-6 text-center font-semibold shadow-md">
+                <div className="bg-secondary rounded-xl p-6 text-center font-semibold shadow-md">
                     50+ Caregivers
                 </div>
-                <div className="rounded-xl bg-[#dedede] p-6 text-center font-semibold shadow-md">
+                <div className="bg-secondary rounded-xl p-6 text-center font-semibold shadow-md">
                     20+ Hospitals
                 </div>
-                <div className="rounded-xl bg-[#dedede] p-6 text-center font-semibold shadow-md">
+                <div className="bg-secondary rounded-xl p-6 text-center font-semibold shadow-md">
                     35+ Medical Support
                 </div>
             </section>
 
-            <section className="vision-mission flex flex-wrap gap-8 bg-[#f4b160] p-16">
-                <div className="min-w-[280px] flex-1 text-white">
+            <section className="vision-mission bg-primary text-primary-foreground flex flex-wrap gap-8 p-16">
+                <div className="min-w-[280px] flex-1">
                     <h4 className="mb-2 text-lg font-medium">
                         Vision & Mission
                     </h4>
@@ -53,7 +53,7 @@ export default function About() {
                 </div>
 
                 <div className="flex min-w-[300px] flex-1 gap-4">
-                    <div className="w-56 rounded-xl bg-white p-6 text-center shadow-md">
+                    <div className="bg-card text-card-foreground w-56 rounded-xl p-6 text-center shadow-md">
                         <Image
                             src="/images/about/vision.jpg"
                             alt="vision icon"
@@ -68,7 +68,7 @@ export default function About() {
                         </p>
                     </div>
 
-                    <div className="w-56 rounded-xl bg-white p-6 text-center shadow-md">
+                    <div className="bg-card text-card-foreground w-56 rounded-xl p-6 text-center shadow-md">
                         <Image
                             src="/images/about/mission.jpg"
                             alt="mission icon"
@@ -86,14 +86,14 @@ export default function About() {
             </section>
 
             {/* Why Choose Us */}
-            <section className="flex flex-wrap items-stretch bg-white">
-                <div className="flex flex-1 flex-col justify-center rounded-tr-[40px] rounded-br-[40px] bg-[#e8b569] p-12 text-white">
+            <section className="bg-background flex flex-wrap items-stretch">
+                <div className="bg-primary text-primary-foreground flex flex-1 flex-col justify-center rounded-tr-[40px] rounded-br-[40px] p-12">
                     <h4 className="mb-2 text-base">Why Choose Us</h4>
                     <h2 className="mb-4 text-2xl leading-tight font-bold">
                         Making The Best Impression On Your Old Age Is Our
                         Happiness
                     </h2>
-                    <p className="prose mb-6 font-light text-white">
+                    <p className="prose text-primary-foreground/90 mb-6 font-light">
                         Everyone should strive to live the best life possible,
                         and seniors have a unique opportunity to show others how
                         to find happiness throughout the aging process. These
@@ -146,8 +146,8 @@ export default function About() {
                 </div>
             </section>
 
-            <section className="bg-[#f9f9f9] p-16 text-center">
-                <p className="text-[#e4a85f]">Our Lovely Team</p>
+            <section className="bg-secondary p-16 text-center">
+                <p className="text-primary">Our Lovely Team</p>
                 <h2 className="mx-auto mt-2 mb-6 max-w-2xl text-2xl font-bold">
                     The Qualified, Licensed, And Professional Nurses & Doctors
                     You Can Rely On
@@ -163,7 +163,7 @@ export default function About() {
                 </div>
                 <Link
                     href="/team"
-                    className="inline-block rounded-md bg-[#fbb03b] px-6 py-3 font-semibold text-white hover:bg-[#e09c2d]"
+                    className="bg-primary text-primary-foreground inline-block rounded-md px-6 py-3 font-semibold hover:opacity-90"
                 >
                     Nurses & Doctors
                 </Link>

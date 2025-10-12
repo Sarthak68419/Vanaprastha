@@ -28,16 +28,16 @@ export default function Team() {
     ];
 
     return (
-        <div className="bg-white text-[#2f2f2f]">
-            <section className="bg-[#2f2f2f] py-16 text-center text-white">
+        <div className="bg-background text-foreground">
+            <section className="bg-foreground text-background py-16 text-center">
                 <h1 className="text-4xl font-bold">Team</h1>
                 <p className="mt-2">
-                    <span className="text-[#f4a825]">Home</span> / Team
+                    <span className="text-primary">Home</span> / Team
                 </p>
             </section>
 
             <section className="py-12 text-center">
-                <p className="text-[#e7a548]">Nurses & Doctors</p>
+                <p className="text-primary">Nurses & Doctors</p>
                 <h2 className="mt-2 text-3xl font-bold">
                     Meet Our Lovely Nurses & Doctors
                 </h2>
@@ -47,7 +47,7 @@ export default function Team() {
                 {members.map((m) => (
                     <div
                         key={m.name}
-                        className="overflow-hidden rounded-2xl bg-white shadow-lg transition hover:-translate-y-2"
+                        className="bg-card text-card-foreground overflow-hidden rounded-2xl shadow-lg transition hover:-translate-y-2"
                     >
                         <Image
                             src={m.src}
@@ -56,11 +56,11 @@ export default function Team() {
                             height={240}
                             className="h-[380px] w-full object-cover"
                         />
-                        <div className="mx-6 -mt-6 rounded-lg bg-white p-4 text-center shadow-md">
-                            <h4 className="mb-1 text-lg font-bold text-[#f7931e]">
+                        <div className="bg-card text-card-foreground mx-6 -mt-6 rounded-lg p-4 text-center shadow-md">
+                            <h4 className="text-primary mb-1 text-lg font-bold">
                                 {m.name}
                             </h4>
-                            <span className="text-sm text-[#555]">
+                            <span className="text-muted-foreground text-sm">
                                 {m.role}
                             </span>
                         </div>

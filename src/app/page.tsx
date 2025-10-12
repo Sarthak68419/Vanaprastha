@@ -6,9 +6,9 @@ import AboutSection from '../components/AboutSection';
 
 export default function Home() {
     return (
-        <div className="bg-white text-[#333]">
+        <div className="bg-background text-foreground">
             {/* Hero Section */}
-            <section className="relative bg-[#f8e8dc] text-left">
+            <section className="bg-accent relative text-left">
                 <Image
                     src="/images/home/hero.jpg"
                     alt="Caregiver and elderly"
@@ -16,7 +16,7 @@ export default function Home() {
                     width={1200}
                     height={700}
                 />
-                <div className="absolute top-1/5 left-5 max-w-lg text-white">
+                <div className="text-card-foreground absolute top-1/5 left-5 max-w-lg">
                     <h1 className="mb-4 text-4xl font-bold">
                         Making You Feel Special Is Not Our Goal But Our Identity
                     </h1>
@@ -25,18 +25,18 @@ export default function Home() {
                     </p>
                     <Link
                         href="/contact"
-                        className="inline-block rounded-md bg-[#ff944d] px-6 py-3 text-base font-medium text-white"
+                        className="bg-primary text-primary-foreground inline-block rounded-md px-6 py-3 text-base font-medium"
                     >
                         Get Started
                     </Link>
                 </div>
                 <div className="absolute top-1/3 right-5 flex flex-col gap-4">
-                    <div className="w-44 rounded-lg bg-[#ffa64d] p-4 text-white shadow-md">
+                    <div className="bg-primary text-primary-foreground w-44 rounded-lg p-4 shadow-md">
                         <h4 className="font-semibold">
                             Flexible Time Visiting
                         </h4>
                     </div>
-                    <div className="w-44 rounded-lg bg-[#ffa64d] p-4 text-white shadow-md">
+                    <div className="bg-primary text-primary-foreground w-44 rounded-lg p-4 shadow-md">
                         <h4 className="font-semibold">24/7 Support</h4>
                     </div>
                 </div>
@@ -55,30 +55,30 @@ export default function Home() {
             />
 
             {/* Stats Section */}
-            <section className="flex justify-around bg-white p-8">
-                <div className="rounded-xl bg-[#dedede] p-6 text-center font-semibold shadow-md">
+            <section className="bg-background flex justify-around p-8">
+                <div className="bg-secondary rounded-xl p-6 text-center font-semibold shadow-md">
                     500+ Happy Elders
                 </div>
-                <div className="rounded-xl bg-[#dedede] p-6 text-center font-semibold shadow-md">
+                <div className="bg-secondary rounded-xl p-6 text-center font-semibold shadow-md">
                     50+ Caregivers
                 </div>
-                <div className="rounded-xl bg-[#dedede] p-6 text-center font-semibold shadow-md">
+                <div className="bg-secondary rounded-xl p-6 text-center font-semibold shadow-md">
                     20+ Hospitals
                 </div>
-                <div className="rounded-xl bg-[#dedede] p-6 text-center font-semibold shadow-md">
+                <div className="bg-secondary rounded-xl p-6 text-center font-semibold shadow-md">
                     35+ Medical Support
                 </div>
             </section>
 
             {/* Why Choose Us Section */}
-            <section className="flex flex-wrap items-stretch bg-white">
-                <div className="flex flex-1 flex-col justify-center rounded-tr-[40px] rounded-br-[40px] bg-[#e8b569] p-12 text-white">
+            <section className="bg-background flex flex-wrap items-stretch">
+                <div className="bg-primary text-primary-foreground flex flex-1 flex-col justify-center rounded-tr-[40px] rounded-br-[40px] p-12">
                     <h4 className="mb-2 text-base">Why Choose Us</h4>
                     <h2 className="mb-4 text-2xl leading-tight font-bold">
                         Making The Best Impression On Your Old Age Is Our
                         Happiness
                     </h2>
-                    <p className="mb-6">
+                    <p className="prose text-background mb-6 font-light">
                         Everyone should strive to live the best life possible,
                         and seniors have a unique opportunity to show others how
                         to find happiness throughout the aging process. These
@@ -132,7 +132,7 @@ export default function Home() {
             </section>
 
             {/* Contact CTA Section */}
-            <section className="bg-[#e8ab5f] px-6 py-16 text-center text-white">
+            <section className="bg-primary text-primary-foreground px-6 py-16 text-center">
                 <h2 className="text-2xl font-bold">
                     Contact Us Easily To Receive A Quote
                 </h2>
@@ -146,11 +146,11 @@ export default function Home() {
 
             {/* Contact / Form */}
             <section className="mx-auto -mt-16 grid max-w-6xl grid-cols-1 gap-6 p-6 md:grid-cols-2">
-                <div className="rounded-lg bg-white p-8 shadow-lg">
+                <div className="bg-card text-card-foreground rounded-lg p-8 shadow-lg">
                     <h3 className="text-xl font-bold">
                         Come & Be A Part Of Our New Family, Follow Your Dream
                     </h3>
-                    <p className="mt-3 text-[#555]">
+                    <p className="text-muted-foreground mt-3">
                         VANAPRASTHA is an umbrella term for a wide array of
                         services intended to help older people live as
                         comfortably and independently as possible.
@@ -176,7 +176,7 @@ export default function Home() {
                     </div>
 
                     <div className="mt-6 flex items-start gap-4">
-                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#f4a841]">
+                        <div className="bg-primary text-primary-foreground flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full">
                             <Image
                                 src="/images/home/location.jpg"
                                 alt="Location Icon"
@@ -186,7 +186,7 @@ export default function Home() {
                         </div>
                         <div>
                             <h5 className="font-semibold">Our Location</h5>
-                            <p className="text-sm text-[#555]">
+                            <p className="text-muted-foreground text-sm">
                                 KVR Hospital Premises 3-5-118/4,16 Shutter X
                                 Road, Opposite SYR Swimming Pool, Hyderabad,
                                 Attapur, Rajendranagar Mandal, Telangana 500048
@@ -196,7 +196,7 @@ export default function Home() {
                     </div>
 
                     <div className="mt-6 flex items-start gap-4">
-                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#f4a841]">
+                        <div className="bg-primary text-primary-foreground flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full">
                             <Image
                                 src="/images/whatsapp.jpg"
                                 alt="Phone Icon"
@@ -214,7 +214,7 @@ export default function Home() {
                     </div>
 
                     <div className="mt-6 flex items-start gap-4">
-                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#f4a841]">
+                        <div className="bg-primary text-primary-foreground flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full">
                             <Image
                                 src="/images/home/mail.jpg"
                                 alt="Email Icon"
@@ -231,7 +231,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <form className="flex flex-col gap-4 rounded-lg bg-white p-8 shadow-lg">
+                <form className="bg-card text-card-foreground flex flex-col gap-4 rounded-lg p-8 shadow-lg">
                     <div className="flex gap-4">
                         <input
                             className="flex-1 rounded-md border p-3"
@@ -271,7 +271,7 @@ export default function Home() {
                         placeholder="Your Message"
                     ></textarea>
                     <button
-                        className="rounded-md bg-[#f4a841] px-4 py-3 font-bold text-white"
+                        className="bg-primary text-primary-foreground rounded-md px-4 py-3 font-bold"
                         type="submit"
                     >
                         Submit Now
@@ -290,21 +290,21 @@ export default function Home() {
                             height={250}
                             className="w-full rounded-lg"
                         />
-                        <div className="absolute -bottom-5 left-5 max-w-[85%] rounded-md bg-[#f5a623] p-4 text-sm text-white shadow-lg">
+                        <div className="bg-primary text-primary-foreground absolute -bottom-5 left-5 max-w-[85%] rounded-md p-4 text-sm shadow-lg">
                             Positive Mission Of Helping Vulnerable Older Adults,
                             Cooperative Team Environment. Good Combination Of
                             Pay And Time Off
                         </div>
                     </div>
                     <div className="flex-1">
-                        <p className="mb-2 font-medium text-[#f5a623]">
+                        <p className="text-primary mb-2 font-medium">
                             Testimonial
                         </p>
                         <h2 className="mb-4 text-2xl">
                             What They Say About Us ?
                         </h2>
-                        <div className="mb-4 text-xl text-[#f5a623]">★★★★★</div>
-                        <p className="mb-6 leading-relaxed text-[#666]">
+                        <div className="text-primary mb-4 text-xl">★★★★★</div>
+                        <p className="text-muted-foreground mb-6 leading-relaxed">
                             Without the help of Vanaprastha there is no way we
                             could have gracefully navigated our way through the
                             last couple of years. We thought we were prepared
@@ -322,7 +322,7 @@ export default function Home() {
                             />
                             <div>
                                 <p className="font-bold">John Doe</p>
-                                <p className="text-sm text-[#888]">
+                                <p className="text-muted-foreground text-sm">
                                     Designation
                                 </p>
                             </div>
@@ -332,8 +332,8 @@ export default function Home() {
             </section>
 
             {/* Team Section */}
-            <section className="bg-[#f9f9f9] p-16 text-center">
-                <p className="text-[#e4a85f]">Our Lovely Team</p>
+            <section className="bg-secondary p-16 text-center">
+                <p className="text-primary">Our Lovely Team</p>
                 <h2 className="mx-auto mt-2 mb-6 max-w-2xl text-2xl font-bold">
                     The Qualified, Licensed, And Professional Nurses & Doctors
                     You Can Rely On
@@ -349,7 +349,7 @@ export default function Home() {
                 </div>
                 <Link
                     href="/team"
-                    className="inline-block rounded-md bg-[#fbb03b] px-6 py-3 font-semibold text-white hover:bg-[#e09c2d]"
+                    className="bg-primary text-primary-foreground inline-block rounded-md px-6 py-3 font-semibold hover:opacity-90"
                 >
                     Nurses & Doctors
                 </Link>

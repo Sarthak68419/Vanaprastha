@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Navbar = () => {
     return (
-        <nav className="relative flex items-center bg-[#2f2f2f] px-12 py-2">
+        <nav className="bg-foreground text-background relative flex items-center px-12 py-2">
             {/* Logo Section */}
             <div className="logo">
                 <Image
@@ -19,37 +19,37 @@ const Navbar = () => {
             <div className="absolute left-1/2 flex -translate-x-1/2 transform gap-8">
                 <Link
                     href="/"
-                    className="text-base font-medium text-white hover:text-[#f4a64d]"
+                    className="hover:text-primary text-base font-medium"
                 >
                     Home
                 </Link>
                 <Link
                     href="/about"
-                    className="text-base font-medium text-white hover:text-[#f4a64d]"
+                    className="hover:text-primary text-base font-medium"
                 >
                     About Us
                 </Link>
                 <Link
                     href="/services"
-                    className="text-base font-medium text-white hover:text-[#f4a64d]"
+                    className="hover:text-primary text-base font-medium"
                 >
                     Services
                 </Link>
                 <Link
                     href="/team"
-                    className="text-base font-medium text-white hover:text-[#f4a64d]"
+                    className="hover:text-primary text-base font-medium"
                 >
                     Team
                 </Link>
                 <Link
                     href="/gallery"
-                    className="text-base font-medium text-white hover:text-[#f4a64d]"
+                    className="hover:text-primary text-base font-medium"
                 >
                     Gallery
                 </Link>
                 <Link
                     href="/contact"
-                    className="text-base font-medium text-white hover:text-[#f4a64d]"
+                    className="hover:text-primary text-base font-medium"
                 >
                     Contact
                 </Link>

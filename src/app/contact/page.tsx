@@ -4,20 +4,18 @@ import Footer from '../../components/Footer';
 
 export default function Contact() {
     return (
-        <div className="bg-white text-[#2f2f2f]">
-            <section className="bg-[#2f2f2f] py-16 text-center text-white">
+        <div className="bg-background text-foreground">
+            <section className="bg-foreground text-background py-16 text-center">
                 <h1 className="text-4xl font-bold">Contact</h1>
                 <p className="mt-2">
-                    <span className="text-[#f4a825]">Home</span> / Contact
+                    <span className="text-primary">Home</span> / Contact
                 </p>
             </section>
 
             <main className="mx-auto grid max-w-6xl grid-cols-1 gap-8 p-8 md:grid-cols-2">
                 <div>
                     <div className="prose prose-neutral max-w-none">
-                        <h4 className="font-bold text-[#f4a825]">
-                            Get In Touch
-                        </h4>
+                        <h4 className="text-primary font-bold">Get In Touch</h4>
                         <h2 className="mt-2 text-3xl font-bold">
                             Come & Be a Part Of Our New Family
                         </h2>
@@ -106,7 +104,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                    <form className="flex flex-col gap-4 rounded-lg bg-white p-6 shadow-md">
+                    <form className="bg-card text-card-foreground flex flex-col gap-4 rounded-lg p-6 shadow-md">
                         <div className="flex gap-4">
                             <input
                                 className="flex-1 rounded-md border p-3"
@@ -146,7 +144,7 @@ export default function Contact() {
                             placeholder="Your Message"
                         ></textarea>
                         <button
-                            className="rounded-md bg-[#f4a825] px-4 py-3 font-bold text-white"
+                            className="bg-primary text-primary-foreground rounded-md px-4 py-3 font-bold"
                             type="submit"
                         >
                             Submit Now
