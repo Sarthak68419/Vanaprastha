@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import '../../styles/Gallery.css';
+import Footer from '../../components/Footer';
 
 export default function Gallery() {
     const images = [
@@ -16,99 +16,37 @@ export default function Gallery() {
     ];
 
     return (
-        <div className="gallery-container">
-            {/* Breadcrumb */}
-            <div className="breadcrumb-section">
-                <h1>Gallery</h1>
-                <p>
-                    <span className="breadcrumb-home">Home</span> / Gallery
+        <div className="bg-white text-[#2f2f2f]">
+            <section className="bg-[#2f2f2f] text-white text-center py-16">
+                <h1 className="text-4xl font-bold">Gallery</h1>
+                <p className="mt-2">
+                    <span className="text-[#f4a825]">Home</span> / Gallery
                 </p>
-            </div>
-
-            {/* Title */}
-            <section className="gallery-hero">
-                <h2>Gallery</h2>
-                <h3>Feel the Happiness</h3>
             </section>
 
-            {/* Image Grid */}
-            <div className="gallery-grid">
+            <section className="text-center my-10">
+                <h2 className="text-[#d4a017] text-sm mb-2">Gallery</h2>
+                <h3 className="text-2xl font-bold">Feel the Happiness</h3>
+            </section>
+
+            <section className="max-w-6xl mx-auto p-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                 {images.map((src, idx) => (
-                    <div key={idx} className="gallery-item">
+                    <div
+                        key={idx}
+                        className="overflow-hidden rounded-md bg-[#f5f5f5]"
+                    >
                         <Image
                             src={src}
                             alt={`Gallery ${idx + 1}`}
                             width={600}
                             height={400}
+                            className="w-full h-auto object-contain block"
                         />
                     </div>
                 ))}
-            </div>
+            </section>
 
-            {/* Footer */}
-            <footer className="footer">
-                <div className="footer-content">
-                    {/* Logo */}
-                    <Image
-                        src="/images/navbar/logo.jpg"
-                        alt="Logo"
-                        className="footer-logo"
-                        width={120}
-                        height={60}
-                    />
-
-                    {/* Nav Links */}
-                    <ul className="footer-nav">
-                        <li>
-                            <Link href="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link href="/about">About Us</Link>
-                        </li>
-                        <li>
-                            <Link href="/services">Services</Link>
-                        </li>
-                        <li>
-                            <Link href="/team">Team</Link>
-                        </li>
-                        <li>
-                            <Link href="/gallery">Gallery</Link>
-                        </li>
-                        <li>
-                            <Link href="/contact">Contact</Link>
-                        </li>
-                    </ul>
-
-                    {/* Social Icons */}
-                    <div className="footer-icons">
-                        <Image
-                            src="/images/facebook.jpg"
-                            alt="icon"
-                            width={32}
-                            height={32}
-                        />
-                        <Image
-                            src="/images/twitter.jpg"
-                            alt="icon"
-                            width={32}
-                            height={32}
-                        />
-                        <Image
-                            src="/images/youtube.jpg"
-                            alt="icon"
-                            width={32}
-                            height={32}
-                        />
-                    </div>
-
-                    <hr />
-
-                    {/* Copyright */}
-                    <p className="footer-copy">
-                        © 2025 Vanaprastha Care. All rights reserved.
-                    </p>
-                </div>
-            </footer>
+            <Footer />
         </div>
     );
 }

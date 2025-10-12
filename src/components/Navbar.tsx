@@ -1,39 +1,56 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import '../styles/Navbar.css';
 
 const Navbar = () => {
     return (
-        <nav className="navbar">
+        <nav className="flex items-center bg-[#2f2f2f] px-12 py-2 relative">
             {/* Logo Section */}
             <div className="logo">
                 <Image
                     src="/images/navbar/logo.jpg"
                     alt="Vanaprastha Logo"
-                    className="logo_pic"
+                    className="h-12 object-contain block"
                     width={120}
                     height={60}
                 />
             </div>
 
-            {/* Nav Links */}
-            <div className="nav-links">
-                <Link href="/" className="nav-link">
+            {/* Nav Links (centered) */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 flex gap-8">
+                <Link
+                    href="/"
+                    className="text-white text-base font-medium hover:text-[#f4a64d]"
+                >
                     Home
                 </Link>
-                <Link href="/about" className="nav-link">
+                <Link
+                    href="/about"
+                    className="text-white text-base font-medium hover:text-[#f4a64d]"
+                >
                     About Us
                 </Link>
-                <Link href="/services" className="nav-link">
+                <Link
+                    href="/services"
+                    className="text-white text-base font-medium hover:text-[#f4a64d]"
+                >
                     Services
                 </Link>
-                <Link href="/team" className="nav-link">
+                <Link
+                    href="/team"
+                    className="text-white text-base font-medium hover:text-[#f4a64d]"
+                >
                     Team
                 </Link>
-                <Link href="/gallery" className="nav-link">
+                <Link
+                    href="/gallery"
+                    className="text-white text-base font-medium hover:text-[#f4a64d]"
+                >
                     Gallery
                 </Link>
-                <Link href="/contact" className="nav-link">
+                <Link
+                    href="/contact"
+                    className="text-white text-base font-medium hover:text-[#f4a64d]"
+                >
                     Contact
                 </Link>
             </div>

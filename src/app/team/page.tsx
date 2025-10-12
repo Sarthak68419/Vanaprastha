@@ -1,91 +1,71 @@
 import React from 'react';
 import Image from 'next/image';
-import '../../styles/Team.css';
 import Footer from '../../components/Footer';
 
 export default function Team() {
-    return (
-        <div className="team-container">
-            {/* Breadcrumb */}
-            <div className="breadcrumb-section">
-                <h1>Team</h1>
-                <p>
-                    <span className="breadcrumb-home">Home</span> / Team
-                </p>
-            </div>
+    const members = [
+        {
+            src: '/images/team/team1.jpg',
+            name: 'Rani Koppula',
+            role: 'Doctor, Managing Director',
+        },
+        {
+            src: '/images/team/Siri.jpg',
+            name: 'Siri Vadlamudi',
+            role: 'Manager',
+        },
+        {
+            src: '/images/team/Sarthak.jpg',
+            name: 'Sarthak Vadlamudi',
+            role: 'Tech Lead',
+        },
+        {
+            src: '/images/team/team2.jpg',
+            name: 'Bindhu Reddy',
+            role: 'Manager',
+        },
+        { src: '/images/team/team3.jpg', name: 'Vanaprastha', role: 'Team' },
+    ];
 
-            {/* Page Header */}
-            <section className="team-hero">
-                <p className="team-subtitle">Nurses & Doctors</p>
-                <h2 className="team-title">Meet Our Lovely Nurses & Doctors</h2>
+    return (
+        <div className="bg-white text-[#2f2f2f]">
+            <section className="bg-[#2f2f2f] text-white text-center py-16">
+                <h1 className="text-4xl font-bold">Team</h1>
+                <p className="mt-2">
+                    <span className="text-[#f4a825]">Home</span> / Team
+                </p>
             </section>
 
-            {/* Team Members */}
-            <section className="team-list">
-                <div className="team-card">
-                    <Image
-                        src="/images/team/team1.jpg"
-                        alt="Rani Koppula"
-                        width={240}
-                        height={240}
-                    />
-                    <div className="team-info">
-                        <h4>Rani Koppula</h4>
-                        <span>Doctor, Managing Director</span>
-                    </div>
-                </div>
+            <section className="text-center py-12">
+                <p className="text-[#e7a548]">Nurses & Doctors</p>
+                <h2 className="text-3xl font-bold mt-2">
+                    Meet Our Lovely Nurses & Doctors
+                </h2>
+            </section>
 
-                <div className="team-card">
-                    <Image
-                        src="/images/team/Siri.jpg"
-                        alt="Siri Vadlamudi"
-                        width={240}
-                        height={240}
-                    />
-                    <div className="team-info">
-                        <h4>Siri Vadlamudi</h4>
-                        <span>Manager</span>
+            <section className="max-w-6xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-6">
+                {members.map((m) => (
+                    <div
+                        key={m.name}
+                        className="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 transition"
+                    >
+                        <Image
+                            src={m.src}
+                            alt={m.name}
+                            width={240}
+                            height={240}
+                            className="w-full h-[380px] object-cover"
+                        />
+                        <div className="bg-white p-4 -mt-6 mx-6 rounded-lg text-center shadow-md">
+                            <h4 className="text-lg font-bold text-[#f7931e] mb-1">
+                                {m.name}
+                            </h4>
+                            <span className="text-sm text-[#555]">
+                                {m.role}
+                            </span>
+                        </div>
                     </div>
-                </div>
-
-                <div className="team-card">
-                    <Image
-                        src="/images/team/Sarthak.jpg"
-                        alt="Sarthak Vadlamudi"
-                        width={240}
-                        height={240}
-                    />
-                    <div className="team-info">
-                        <h4>Sarthak Vadlamudi</h4>
-                        <span>Tech Lead</span>
-                    </div>
-                </div>
-
-                <div className="team-card">
-                    <Image
-                        src="/images/team/team2.jpg"
-                        alt="Bindhu Reddy"
-                        width={240}
-                        height={240}
-                    />
-                    <div className="team-info">
-                        <h4>Bindhu Reddy</h4>
-                        <span>Manager</span>
-                    </div>
-                </div>
-
-                <div className="team-card">
-                    <Image
-                        src="/images/team/team3.jpg"
-                        alt="Vanaprastha Team"
-                        width={240}
-                        height={240}
-                    />
-                    <div className="team-info">
-                        <h4>Vanaprastha</h4>
-                        <span>Team</span>
-                    </div>
-                </div>
+                ))}
             </section>
 
             <Footer />
