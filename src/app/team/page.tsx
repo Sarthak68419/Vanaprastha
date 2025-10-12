@@ -1,7 +1,7 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import "../../styles/Team.css";
+import Footer from "../../components/Footer";
 
 export default function Team() {
   return (
@@ -64,41 +64,7 @@ export default function Team() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="footer-content">
-          {/* Logo */}
-          <img
-            src="/images/navbar/logo.jpg"
-            alt="Logo"
-            className="footer-logo"
-          />
-
-          {/* Nav Links */}
-          <ul className="footer-nav">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/about">About Us</Link></li>
-            <li><Link href="/services">Services</Link></li>
-            <li><Link href="/team">Team</Link></li>
-            <li><Link href="/gallery">Gallery</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
-          </ul>
-
-          {/* Social Icons */}
-          <div className="footer-icons">
-            <img src="/images/facebook.jpg" alt="icon" />
-            <img src="/images/twitter.jpg" alt="icon" />
-            <img src="/images/youtube.jpg" alt="icon" />
-          </div>
-
-          <hr />
-
-          {/* Copyright */}
-          <p className="footer-copy">
-            © 2025 Vanaprastha Care. All rights reserved. 
-          </p>
-        </div>
-      </footer>
+      <Footer />
 
     </div>
   );
