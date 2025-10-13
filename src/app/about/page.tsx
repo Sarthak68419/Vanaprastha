@@ -6,7 +6,6 @@ import WhyChooseUs from '../components/WhyChooseUs';
 import TeamSection from '../components/TeamSection';
 import {
     Card,
-    CardHeader,
     CardTitle,
     CardDescription,
     CardContent,
