@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import AboutSection from '../components/AboutSection';
 import WhyChooseUs from './components/WhyChooseUs';
 import TeamSection from './components/TeamSection';
+import Testimonials from '@/components/Testimonials';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import ContactForm from '@/components/ContactForm';
@@ -164,57 +165,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Testimonials Section */}
-            <section className="flex justify-center p-16">
-                <div className="flex max-w-4xl items-center gap-10">
-                    <div className="relative flex-1">
-                        <Image
-                            src="/images/home/positivemission.jpg"
-                            alt="Reviewer"
-                            width={400}
-                            height={250}
-                            className="w-full rounded-lg"
-                        />
-                        <div className="bg-primary text-primary-foreground absolute -bottom-5 left-5 max-w-[85%] rounded-md p-4 text-sm shadow-lg">
-                            Positive Mission Of Helping Vulnerable Older Adults,
-                            Cooperative Team Environment. Good Combination Of
-                            Pay And Time Off
-                        </div>
-                    </div>
-                    <div className="flex-1">
-                        <p className="text-primary mb-2 font-medium">
-                            Testimonial
-                        </p>
-                        <h2 className="mb-4 text-2xl">
-                            What They Say About Us ?
-                        </h2>
-                        <div className="text-primary mb-4 text-xl">★★★★★</div>
-                        <p className="text-muted-foreground mb-6 leading-relaxed">
-                            Without the help of Vanaprastha there is no way we
-                            could have gracefully navigated our way through the
-                            last couple of years. We thought we were prepared
-                            for the journey we were on, but in truth, we really
-                            had no idea of the many obstacles we were going to
-                            face.
-                        </p>
-                        <div className="flex items-center gap-4">
-                            <Image
-                                src="/images/home/johndoe.jpg"
-                                alt="Reviewer"
-                                width={80}
-                                height={80}
-                                className="rounded-full object-cover"
-                            />
-                            <div>
-                                <p className="font-bold">John Doe</p>
-                                <p className="text-muted-foreground text-sm">
-                                    Designation
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Testimonials />
 
             <TeamSection />
 
