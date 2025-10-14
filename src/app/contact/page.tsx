@@ -3,15 +3,22 @@ import Image from 'next/image';
 import Footer from '../../components/Footer';
 import ContactForm from '@/components/ContactForm';
 import { MapPin, Phone, Mail } from 'lucide-react';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function Contact() {
     return (
         <div className="bg-background text-foreground">
             <section className="bg-foreground text-background py-16 text-center">
                 <h1 className="text-4xl font-bold">Contact</h1>
-                <p className="mt-2">
-                    <span className="text-primary">Home</span> / Contact
-                </p>
+                <div className="mt-2 flex justify-center">
+                    <Breadcrumbs
+                        invertColors
+                        items={[
+                            { label: 'Home', href: '/' },
+                            { label: 'Contact' },
+                        ]}
+                    />
+                </div>
             </section>
 
             <main className="mx-auto grid max-w-6xl grid-cols-1 gap-8 p-8 md:grid-cols-2">

@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Footer from '../../components/Footer';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 type GalleryImage = {
     src: string;
@@ -67,10 +68,15 @@ export default function Gallery() {
         <div className="bg-[var(--background)] text-[var(--foreground)]">
             <section className="bg-foreground text-primary-foreground py-16 text-center">
                 <h1 className="text-4xl font-bold">Gallery</h1>
-                <p className="mt-2">
-                    <span className="text-[var(--primary)]">Home</span> /
-                    Gallery
-                </p>
+                <div className="mt-2 flex justify-center">
+                    <Breadcrumbs
+                        invertColors
+                        items={[
+                            { label: 'Home', href: '/' },
+                            { label: 'Gallery' },
+                        ]}
+                    />
+                </div>
             </section>
 
             <section className="my-10 text-center">

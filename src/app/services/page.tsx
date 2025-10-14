@@ -7,14 +7,21 @@ import {
     CardTitle,
     CardDescription,
 } from '@/components/ui/card';
+import Breadcrumbs from '@/components/Breadcrumbs';
 export default function Services() {
     return (
         <div className="bg-background text-foreground">
             <section className="bg-foreground text-background py-16 text-center">
                 <h1 className="text-4xl font-bold">Services</h1>
-                <p className="mt-2">
-                    <span className="text-primary">Home</span> / Services
-                </p>
+                <div className="mt-2 flex justify-center">
+                    <Breadcrumbs
+                        invertColors
+                        items={[
+                            { label: 'Home', href: '/' },
+                            { label: 'Services' },
+                        ]}
+                    />
+                </div>
             </section>
 
             <main className="mx-auto max-w-6xl p-8 text-center">
