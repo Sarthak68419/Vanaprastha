@@ -1,105 +1,74 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import "../../styles/Team.css";
+import React from 'react';
+import Image from 'next/image';
+import Footer from '../../components/Footer';
 
 export default function Team() {
-  return (
-    <div className="team-container">
-      
-      {/* Breadcrumb */}
-      <div className="breadcrumb-section">
-        <h1>Team</h1>
-        <p>
-          <span className="breadcrumb-home">Home</span> / Team
-        </p>
-      </div>
+    const members = [
+        {
+            src: '/images/team/team1.jpg',
+            name: 'Rani Koppula',
+            role: 'Doctor, Managing Director',
+        },
+        {
+            src: '/images/team/Siri.jpg',
+            name: 'Siri Vadlamudi',
+            role: 'Manager',
+        },
+        {
+            src: '/images/team/Sarthak.jpg',
+            name: 'Sarthak Vadlamudi',
+            role: 'Tech Lead',
+        },
+        {
+            src: '/images/team/team2.jpg',
+            name: 'Bindhu Reddy',
+            role: 'Manager',
+        },
+        { src: '/images/team/team3.jpg', name: 'Vanaprastha', role: 'Team' },
+    ];
 
-      {/* Page Header */}
-      <section className="team-hero">
-        <p className="team-subtitle">Nurses & Doctors</p>
-        <h2 className="team-title">Meet Our Lovely Nurses & Doctors</h2>
-      </section>
+    return (
+        <div className="bg-background text-foreground">
+            <section className="bg-foreground text-background py-16 text-center">
+                <h1 className="text-4xl font-bold">Team</h1>
+                <p className="mt-2">
+                    <span className="text-primary">Home</span> / Team
+                </p>
+            </section>
 
-      {/* Team Members */}
-      <section className="team-list">
-        <div className="team-card">
-          <Image src="/images/team/team1.jpg" alt="Rani Koppula" width={240} height={240} />
-          <div className="team-info">
-            <h4>Rani Koppula</h4>
-            <span>Doctor, Managing Director</span>
-          </div>
+            <section className="py-12 text-center">
+                <p className="text-primary">Nurses & Doctors</p>
+                <h2 className="mt-2 text-3xl font-bold">
+                    Meet Our Lovely Nurses & Doctors
+                </h2>
+            </section>
+
+            <section className="mx-auto grid max-w-6xl grid-cols-1 gap-8 p-6 sm:grid-cols-2 lg:grid-cols-3">
+                {members.map((m) => (
+                    <div
+                        key={m.name}
+                        className="bg-card text-card-foreground overflow-hidden rounded-2xl shadow-lg transition hover:-translate-y-2"
+                    >
+                        <Image
+                            src={m.src}
+                            alt={m.name}
+                            width={240}
+                            height={240}
+                            className="h-[380px] w-full object-cover"
+                        />
+                        <div className="bg-card text-card-foreground mx-6 -mt-2 p-4 text-center">
+                            <h4 className="text-primary mb-1 text-lg font-bold">
+                                {m.name}
+                            </h4>
+                            <span className="text-muted-foreground text-sm">
+                                {m.role}
+                            </span>
+                        </div>
+                    </div>
+                ))}
+            </section>
+
+            <Footer />
         </div>
-
-        <div className="team-card">
-          <Image src="/images/team/Siri.jpg" alt="Siri Vadlamudi" width={240} height={240} />
-          <div className="team-info">
-            <h4>Siri Vadlamudi</h4>
-            <span>Manager</span>
-          </div>
-        </div>
-
-        <div className="team-card">
-          <Image src="/images/team/Sarthak.jpg" alt="Sarthak Vadlamudi" width={240} height={240} />
-          <div className="team-info">
-            <h4>Sarthak Vadlamudi</h4>
-            <span>Tech Lead</span>
-          </div>
-        </div>
-
-        <div className="team-card">
-          <Image src="/images/team/team2.jpg" alt="Bindhu Reddy" width={240} height={240} />
-          <div className="team-info">
-            <h4>Bindhu Reddy</h4>
-            <span>Manager</span>
-          </div>
-        </div>
-
-        <div className="team-card">
-          <Image src="/images/team/team3.jpg" alt="Vanaprastha Team" width={240} height={240} />
-          <div className="team-info">
-            <h4>Vanaprastha</h4>
-            <span>Team</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="footer">
-        <div className="footer-content">
-          {/* Logo */}
-          <img
-            src="/images/navbar/logo.jpg"
-            alt="Logo"
-            className="footer-logo"
-          />
-
-          {/* Nav Links */}
-          <ul className="footer-nav">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/about">About Us</Link></li>
-            <li><Link href="/services">Services</Link></li>
-            <li><Link href="/team">Team</Link></li>
-            <li><Link href="/gallery">Gallery</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
-          </ul>
-
-          {/* Social Icons */}
-          <div className="footer-icons">
-            <img src="/images/facebook.jpg" alt="icon" />
-            <img src="/images/twitter.jpg" alt="icon" />
-            <img src="/images/youtube.jpg" alt="icon" />
-          </div>
-
-          <hr />
-
-          {/* Copyright */}
-          <p className="footer-copy">
-            © 2025 Vanaprastha Care. All rights reserved. 
-          </p>
-        </div>
-      </footer>
-
-    </div>
-  );
+    );
 }

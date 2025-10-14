@@ -1,83 +1,106 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import "../../styles/Gallery.css";
+import React from 'react';
+import Image from 'next/image';
+import Footer from '../../components/Footer';
+
+type GalleryImage = {
+    src: string;
+    width: number;
+    height: number;
+    alt: string;
+};
 
 export default function Gallery() {
-  const images = [
-    "/images/gallery/gallery1.jpg",
-    "/images/gallery/gallery2.jpg",
-    "/images/gallery/gallery3.jpeg",
-    "/images/gallery/gallery4.jpeg",
-    "/images/gallery/gallery5.jpg",
-    "/images/gallery/gallery6.jpg",
-    "/images/gallery/gallery7.jpg",
-    "/images/gallery/gallery8.jpg",
-  ];
+    // Use real intrinsic dimensions so images render in a natural collage
+    // TODO: Use better alt texts - the current ones are misleading
+    const images: GalleryImage[] = [
+        {
+            src: '/images/gallery/gallery1.jpg',
+            width: 1280,
+            height: 722,
+            alt: 'Residents enjoying nature walk',
+        },
+        {
+            src: '/images/gallery/gallery2.jpg',
+            width: 1024,
+            height: 768,
+            alt: 'Community space with warm lighting',
+        },
+        {
+            src: '/images/gallery/gallery5.jpg',
+            width: 1600,
+            height: 1200,
+            alt: 'Cozy lounge and reading corner',
+        },
+        {
+            src: '/images/gallery/gallery3.jpeg',
+            width: 4032,
+            height: 1860,
+            alt: 'Wide garden view with pathways',
+        },
+        {
+            src: '/images/gallery/gallery4.jpeg',
+            width: 4032,
+            height: 1860,
+            alt: 'Panoramic outdoor seating area',
+        },
+        {
+            src: '/images/gallery/gallery6.jpg',
+            width: 1280,
+            height: 723,
+            alt: 'Sunlit corridor with plants',
+        },
+        {
+            src: '/images/gallery/gallery7.jpg',
+            width: 1024,
+            height: 768,
+            alt: 'Dining area prepared for a meal',
+        },
+        {
+            src: '/images/gallery/gallery8.jpg',
+            width: 1024,
+            height: 768,
+            alt: 'Activity room with games and art',
+        },
+    ];
 
-  return (
-    <div className="gallery-container">
-      {/* Breadcrumb */}
-      <div className="breadcrumb-section">
-        <h1>Gallery</h1>
-        <p>
-          <span className="breadcrumb-home">Home</span> / Gallery
-        </p>
-      </div>
+    return (
+        <div className="bg-[var(--background)] text-[var(--foreground)]">
+            <section className="bg-foreground text-primary-foreground py-16 text-center">
+                <h1 className="text-4xl font-bold">Gallery</h1>
+                <p className="mt-2">
+                    <span className="text-[var(--primary)]">Home</span> /
+                    Gallery
+                </p>
+            </section>
 
-      {/* Title */}
-      <section className="gallery-hero">
-        <h2>Gallery</h2>
-        <h3>Feel the Happiness</h3>
-      </section>
+            <section className="my-10 text-center">
+                <h2 className="mb-2 text-sm text-[var(--primary)]">Gallery</h2>
+                <h3 className="text-2xl font-bold">Feel the Happiness</h3>
+            </section>
 
-      {/* Image Grid */}
-      <div className="gallery-grid">
-        {images.map((src, idx) => (
-          <div key={idx} className="gallery-item">
-            <Image src={src} alt={`Gallery ${idx + 1}`} width={600} height={400} />
-          </div>
-        ))}
-      </div>
+            {/* Masonry-style collage using CSS columns */}
+            <section className="mx-auto max-w-6xl p-4">
+                <div className="columns-2 gap-4 sm:columns-3 lg:columns-4">
+                    {images.map((img, idx) => (
+                        <div
+                            key={`${img.src}-${idx}`}
+                            className="mb-4 break-inside-avoid overflow-hidden rounded-md bg-[var(--muted)]"
+                        >
+                            <Image
+                                src={img.src}
+                                alt={img.alt}
+                                width={img.width}
+                                height={img.height}
+                                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                                className="block h-auto w-full"
+                                loading="lazy"
+                            />
+                        </div>
+                    ))}
+                </div>
+            </section>
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="footer-content">
-          {/* Logo */}
-          <Image
-            src="/images/navbar/logo.jpg"
-            alt="Logo"
-            className="footer-logo"
-            width={120}
-            height={60}
-          />
-
-          {/* Nav Links */}
-          <ul className="footer-nav">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/about">About Us</Link></li>
-            <li><Link href="/services">Services</Link></li>
-            <li><Link href="/team">Team</Link></li>
-            <li><Link href="/gallery">Gallery</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
-          </ul>
-
-          {/* Social Icons */}
-          <div className="footer-icons">
-            <Image src="/images/facebook.jpg" alt="icon" width={32} height={32} />
-            <Image src="/images/twitter.jpg" alt="icon" width={32} height={32} />
-            <Image src="/images/youtube.jpg" alt="icon" width={32} height={32} />
-          </div>
-
-          <hr />
-
-          {/* Copyright */}
-          <p className="footer-copy">
-            © 2025 Vanaprastha Care. All rights reserved. 
-          </p>
+            <Footer />
         </div>
-      </footer>
-
-    </div>
-  );
+    );
 }

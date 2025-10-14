@@ -1,131 +1,109 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import "../../styles/Contact.css";
+import React from 'react';
+import Image from 'next/image';
+import Footer from '../../components/Footer';
+import ContactForm from '@/components/ContactForm';
+import { MapPin, Phone, Mail } from 'lucide-react';
 
 export default function Contact() {
-  return (
-    <div className="contact-container">
-      
-      {/* Breadcrumb */}
-      <div className="breadcrumb-section">
-        <h1>Contact</h1>
-        <p>
-          <span className="breadcrumb-home">Home</span> / Contact
-        </p>
-      </div>
+    return (
+        <div className="bg-background text-foreground">
+            <section className="bg-foreground text-background py-16 text-center">
+                <h1 className="text-4xl font-bold">Contact</h1>
+                <p className="mt-2">
+                    <span className="text-primary">Home</span> / Contact
+                </p>
+            </section>
 
-      {/* Main Contact Section */}
-      <div className="contact-wrapper">
-        {/* Left - Info */}
-        <div className="contact-info">
-          <h4 className="info-subtitle">Get In Touch</h4>
-          <h2 className="info-title">Come & Be a Part Of Our New Family</h2>
-          <p className="info-desc">
-            Elderlycare is an umbrella term for a wide array of services intended to help 
-            older people to live as comfortably and independently as possible.
-          </p>
+            <main className="mx-auto grid max-w-6xl grid-cols-1 gap-8 p-8 md:grid-cols-2">
+                <div>
+                    <div className="prose prose-neutral max-w-none">
+                        <h4 className="text-primary font-bold">Get In Touch</h4>
+                        <h2 className="mt-2 text-3xl font-bold">
+                            Come and be a part of our New Family
+                        </h2>
+                        <p className="mt-4">
+                            Elderlycare is an umbrella term for a wide array of
+                            services intended to help older people to live as
+                            comfortably and independently as possible.
+                        </p>
+                    </div>
 
-          <div className="info-block">
-            <Image src="/images/home/clock.jpg" alt="work hours" width={48} height={48} />
-            <div>
-              <h4>Work Hours</h4>
-              <p>
-                Monday - Sunday <br />
-                Open 24/7 Services on demand <br />
-                (Normal: 9:00 AM to 5:00 PM)
-              </p>
-            </div>
-          </div>
+                    <div className="mt-6 flex items-start gap-4">
+                        <Image
+                            src="/images/home/clock.jpg"
+                            alt="work hours"
+                            width={48}
+                            height={48}
+                        />
+                        <div>
+                            <h4 className="font-semibold">Work Hours</h4>
+                            <p className="text-sm">
+                                Monday - Sunday
+                                <br />
+                                Open 24/7 Services on demand
+                                <br />
+                                (Normal: 9:00 AM to 5:00 PM)
+                            </p>
+                        </div>
+                    </div>
 
-          <div className="info-block">
-            <Image src="/images/home/location.jpg" alt="location" width={48} height={48} />
-            <div>
-              <h4>Our Location</h4>
-              <p>
-                KVR Hospital Premises, 3-5-118/4, 16 Shutter X Road, Opposite SYR Swimming Pool, <br />
-                Hyderaguda, Attapur, Rajendranagar Mandal, <br />
-                Hyderabad, Telangana 500048 India
-              </p>
-            </div>
-          </div>
+                    <div className="mt-6 flex items-start gap-4">
+                        <div className="bg-primary text-primary-foreground flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full">
+                            <MapPin className="h-6 w-6" aria-hidden />
+                        </div>
+                        <div>
+                            <h4 className="font-semibold">Our Location</h4>
+                            <p className="text-sm">
+                                KVR Hospital Premises, 3-5-118/4, 16 Shutter X
+                                Road, Opposite SYR Swimming Pool, Hyderaguda,
+                                Attapur, Rajendranagar Mandal, Hyderabad,
+                                Telangana 500048 India
+                            </p>
+                        </div>
+                    </div>
 
-          <div className="info-block">
-            <Image src="/images/whatsapp.jpg" alt="call" width={48} height={48} />
-            <div>
-              <h4>Call Now</h4>
-              <p>Whatsapp: +91 9010647888<br />Phone: 04035837011</p>
-              <p>Manager: Bindhu — +91 8142569565</p>
-              <p>Marketing Manager: Srinivas Reddy — +91 7893133363</p>
-            </div>
-          </div>
+                    <div className="mt-6 flex items-start gap-4">
+                        <div className="bg-primary text-primary-foreground flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full">
+                            <Phone className="h-6 w-6" aria-hidden />
+                        </div>
+                        <div>
+                            <h4 className="font-semibold">Call Now</h4>
+                            <p className="text-sm">
+                                Whatsapp: +91 9010647888
+                                <br />
+                                Phone: 04035837011
+                            </p>
+                            <p className="text-sm">
+                                Manager: Bindhu — +91 8142569565
+                            </p>
+                            <p className="text-sm">
+                                Marketing Manager: Srinivas Reddy — +91
+                                7893133363
+                            </p>
+                        </div>
+                    </div>
 
-          <div className="info-block">
-            <Image src="/images/home/mail.jpg" alt="email" width={48} height={48} />
-            <div>
-              <h4>Our Email</h4>
-              <p>ranikoppula.reddy.rk@gmail.com</p>
-            </div>
-          </div>
+                    <div className="mt-6 flex items-start gap-4">
+                        <div className="bg-primary text-primary-foreground flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full">
+                            <Mail className="h-6 w-6" aria-hidden />
+                        </div>
+                        <div>
+                            <h4 className="font-semibold">Our Email</h4>
+                            <p className="text-sm">
+                                ranikoppula.reddy.rk@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div className="bg-card text-card-foreground rounded-lg p-6 shadow-md">
+                        <ContactForm />
+                    </div>
+                </div>
+            </main>
+
+            <Footer />
         </div>
-
-        {/* Right - Form */}
-        <div className="contact-form-section">
-          <form className="contact-form">
-            <div className="form-row">
-              <input type="text" placeholder="First name here" />
-              <input type="text" placeholder="Last name here" />
-            </div>
-            <div className="form-row">
-              <input type="text" placeholder="Mobile number here" />
-              <input type="email" placeholder="Add email" />
-            </div>
-            <input type="text" placeholder="Enter Area" />
-            <input type="text" placeholder="How can we help you?" />
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit">Submit Now</button>
-          </form>
-        </div>
-      </div>
-      
-      {/* Footer */}
-      <footer className="footer">
-        <div className="footer-content">
-          {/* Logo */}
-          <Image
-            src="/images/navbar/logo.jpg"
-            alt="Logo"
-            className="footer-logo"
-            width={120}
-            height={60}
-          />
-
-          {/* Nav Links */}
-          <ul className="footer-nav">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/about">About Us</Link></li>
-            <li><Link href="/services">Services</Link></li>
-            <li><Link href="/team">Team</Link></li>
-            <li><Link href="/gallery">Gallery</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
-          </ul>
-
-          {/* Social Icons */}
-          <div className="footer-icons">
-            <Image src="/images/facebook.jpg" alt="icon" width={32} height={32} />
-            <Image src="/images/twitter.jpg" alt="icon" width={32} height={32} />
-            <Image src="/images/youtube.jpg" alt="icon" width={32} height={32} />
-          </div>
-
-          <hr />
-
-          {/* Copyright */}
-          <p className="footer-copy">
-            © 2025 Vanaprastha Care. All rights reserved. 
-          </p>
-        </div>
-      </footer>
-
-    </div>
-  );
+    );
 }
