@@ -11,6 +11,7 @@ import {
     BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import { usePathname } from 'next/navigation';
+import { BreadcrumbJsonLd } from 'next-seo';
 
 // Public types
 export interface CrumbDescriptor {
@@ -29,6 +30,8 @@ export interface BreadcrumbsProps {
     labelMap?: Record<string, string>;
     /** Include JSON-LD structured data */
     includeJsonLd?: boolean;
+    /** Base URL (origin) for JSON-LD item URLs, e.g. https://example.com. If omitted, BreadcrumbJsonLd will output relative URLs. */
+    baseUrl?: string;
     /** Replace default separator icon with custom element */
     separator?: React.ReactNode;
     /** Force non-primary crumb text to white (useful on dark/inverted hero backgrounds) */
@@ -43,23 +46,6 @@ function segmentToLabel(segment: string) {
         .replace(/\b\w/g, (m) => m.toUpperCase());
 }
 
-function buildJsonLd(items: CrumbDescriptor[], origin?: string) {
-    // Avoid SSR mismatch; origin optional (can be passed later if needed)
-    const itemListElement = items.map((c, idx) => ({
-        '@type': 'ListItem',
-        position: idx + 1,
-        name: c.label,
-        ...(c.href ? { item: origin ? `${origin}${c.href}` : c.href } : {}),
-    }));
-    return {
-        __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement,
-        }),
-    };
-}
-
 /**
  * Breadcrumbs abstraction leveraging shadcn/ui primitives.
  * Supports either explicit items or automatic derivation from the current pathname.
@@ -70,6 +56,7 @@ export function Breadcrumbs({
     rootLabel = 'Home',
     labelMap,
     includeJsonLd,
+    baseUrl,
     separator,
     invertColors,
     className,
@@ -151,10 +138,17 @@ export function Breadcrumbs({
                 </BreadcrumbList>
             </Breadcrumb>
             {includeJsonLd && (
-                <script
-                    type="application/ld+json"
-                    // eslint-disable-next-line react/no-danger
-                    dangerouslySetInnerHTML={buildJsonLd(autoItems)}
+                <BreadcrumbJsonLd
+                    useAppDir
+                    itemListElements={autoItems.map((c) => ({
+                        position: autoItems.indexOf(c) + 1,
+                        name: c.label,
+                        item: c.href
+                            ? baseUrl
+                                ? `${baseUrl.replace(/\/$/, '')}${c.href}`
+                                : c.href
+                            : undefined,
+                    }))}
                 />
             )}
         </>
