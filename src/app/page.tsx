@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Footer from '../components/Footer';
-import AboutSection from '../components/AboutSection';
-import WhyChooseUs from './components/WhyChooseUs';
-import TeamSection from './components/TeamSection';
+import Footer from '@/components/Footer';
+import AboutSection from '@/components/AboutSection';
+import WhyChooseUs from '@/components/WhyChooseUs';
+import TeamSection from '@/components/TeamSection';
 import Testimonials from '@/components/Testimonials';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';

@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import Footer from '../../components/Footer';
-import AboutSection from '../../components/AboutSection';
-import WhyChooseUs from '../components/WhyChooseUs';
-import TeamSection from '../components/TeamSection';
+import Footer from '@/components/Footer';
+import AboutSection from '@/components/AboutSection';
+import WhyChooseUs from '@/components/WhyChooseUs';
+import TeamSection from '@/components/TeamSection';
 import {
     Card,
     CardTitle,
