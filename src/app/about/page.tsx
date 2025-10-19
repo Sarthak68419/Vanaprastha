@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from 'next/head'; // ✅ ADD THIS LINE
+import Head from 'next/head'; // ✅ SEO HEAD
 import Image from 'next/image';
 import Footer from '../../components/Footer';
 import AboutSection from '../../components/AboutSection';
@@ -15,7 +15,7 @@ import {
 export default function About() {
     return (
         <div className="bg-background text-foreground">
-            {/* ✅ SEO HEAD SECTION */}
+            {/* SEO HEAD */}
             <Head>
                 <title>About Us | Vanaprastha Care</title>
                 <meta
@@ -26,11 +26,10 @@ export default function About() {
                     name="keywords"
                     content="about vanaprastha care, elderly care india, senior care, home health care, caregivers for elderly"
                 />
-                <link
-                    rel="canonical"
-                    href="https://vanaprasthcare.org/about"
-                />
-                {/* Open Graph / Social Meta Tags */}
+                <link rel="canonical" href="https://vanaprasthcare.org/about" />
+                <link rel="icon" href="/favicon.ico" /> {/* Add your favicon */}
+
+                {/* Open Graph / Social Meta */}
                 <meta property="og:title" content="About Us | Vanaprastha Care" />
                 <meta
                     property="og:description"
@@ -78,15 +77,12 @@ export default function About() {
 
             <section className="vision-mission bg-primary text-primary-foreground flex flex-wrap gap-8 p-16">
                 <div className="min-w-[280px] flex-1">
-                    <h4 className="mb-2 text-lg font-medium">
-                        Vision & Mission
-                    </h4>
+                    <h4 className="mb-2 text-lg font-medium">Vision & Mission</h4>
                     <h2 className="mb-4 text-3xl leading-tight font-bold text-balance">
                         WE ARE LIKE SHOULDER SUPPORT FOR YOUR ELDERS
                     </h2>
                     <p className="font-light">
-                        We provide you all the comforts including Health at Your
-                        Doorstep
+                        We provide you all the comforts including Health at Your Doorstep
                     </p>
                 </div>
 
@@ -95,15 +91,14 @@ export default function About() {
                         <CardContent className="p-6">
                             <Image
                                 src="/images/about/vision.jpg"
-                                alt="vision icon"
+                                alt="Vision Icon"
                                 width={80}
                                 height={80}
                                 className="mx-auto mb-4"
                             />
                             <CardTitle className="text-lg">Vision</CardTitle>
                             <CardDescription className="mt-2 text-sm text-[#444]">
-                                COMFORTABLE & PEACEFUL LIFE at their home - Even
-                                at their terminal stage of life with our support
+                                COMFORTABLE & PEACEFUL LIFE at their home - Even at their terminal stage of life with our support
                             </CardDescription>
                         </CardContent>
                     </Card>
@@ -112,15 +107,14 @@ export default function About() {
                         <CardContent className="p-6">
                             <Image
                                 src="/images/about/mission.jpg"
-                                alt="mission icon"
+                                alt="Mission Icon"
                                 width={80}
                                 height={80}
                                 className="mx-auto mb-4"
                             />
                             <CardTitle className="text-lg">Mission</CardTitle>
                             <CardDescription className="mt-2 text-sm text-[#444]">
-                                To provide the best care to every Elderly Person
-                                through a strong focus on service.
+                                To provide the best care to every Elderly Person through a strong focus on service.
                             </CardDescription>
                         </CardContent>
                     </Card>
@@ -133,4 +127,5 @@ export default function About() {
         </div>
     );
 }
+
 
