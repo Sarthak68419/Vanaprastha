@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head'; // ✅ Added for SEO
 import Footer from '../../components/Footer';
 import Testimonials from '@/components/Testimonials';
 import {
@@ -7,9 +8,72 @@ import {
     CardTitle,
     CardDescription,
 } from '@/components/ui/card';
+
 export default function Services() {
+    const servicesData = [
+        {
+            icon: '💊',
+            title: 'Medical Checkup',
+            desc: 'We will arrange like: Monthly regular health check-ups like BP, Diabetes, Thyroid etc.',
+        },
+        {
+            icon: '❤️',
+            title: 'Health Consultation',
+            desc: 'If patient requires any hospital visit, we will arrange appointments with your doctor at your convenient time, and we accompany & support as your son or daughter till back home.',
+        },
+        {
+            icon: '👩‍⚕️',
+            title: 'Care Taker',
+            desc: 'If necessary, we arrange care takers for your loved one. In case of absence, we provide suitable replacements.',
+        },
+        {
+            icon: '🏠',
+            title: 'House Services',
+            desc: 'We arrange medicines, groceries, and even celebrations of birthdays, anniversaries, and gatherings with photo & video updates.',
+        },
+        {
+            icon: '💳',
+            title: 'Payments',
+            desc: 'We will arrange monthly bill payments like water, electricity, phone, and any banking requirements.',
+        },
+        {
+            icon: '⚰️',
+            title: 'Funeral Services',
+            desc: 'If necessary, we provide end-to-end funeral services for the deceased person.',
+        },
+    ];
+
     return (
         <div className="bg-background text-foreground">
+            {/* ✅ SEO HEAD */}
+            <Head>
+                <title>Services | Vanaprastha Care</title>
+                <meta
+                    name="description"
+                    content="Vanaprastha Care provides personalized elderly care services including medical checkups, health consultations, caretakers, house services, payment assistance, and funeral services. Trusted care for your loved ones."
+                />
+                <meta
+                    name="keywords"
+                    content="vanaprastha care services, elderly care services india, senior care, home healthcare, caretaker services, health consultation, medical checkup"
+                />
+                <link rel="canonical" href="https://vanaprasthcare.org/services" />
+                <link rel="icon" href="/favicon.ico" />
+
+                {/* Open Graph / Social Meta Tags */}
+                <meta property="og:title" content="Services | Vanaprastha Care" />
+                <meta
+                    property="og:description"
+                    content="Explore Vanaprastha Care's services for the elderly, from medical checkups to home assistance and compassionate care. Learn how we support seniors and families."
+                />
+                <meta
+                    property="og:image"
+                    content="https://vanaprasthcare.org/images/social-banner.png"
+                />
+                <meta property="og:url" content="https://vanaprasthcare.org/services" />
+                <meta name="twitter:card" content="summary_large_image" />
+            </Head>
+
+            {/* PAGE CONTENT */}
             <section className="bg-foreground text-background py-16 text-center">
                 <h1 className="text-4xl font-bold">Services</h1>
                 <p className="mt-2">
@@ -19,48 +83,13 @@ export default function Services() {
 
             <main className="mx-auto max-w-6xl p-8 text-center">
                 <h4 className="text-primary">Services</h4>
-                <h2 className="mt-2 text-3xl font-bold">
-                    You Are In Good Hands
-                </h2>
+                <h2 className="mt-2 text-3xl font-bold">You Are In Good Hands</h2>
                 <p className="text-muted-foreground mx-auto mt-4 max-w-2xl">
-                    It is a great idea to have collaboration with Vanaprastha to
-                    take care of your loved one in our safe hands in your
-                    absence
+                    It is a great idea to have collaboration with Vanaprastha to take care of your loved one in our safe hands in your absence
                 </p>
 
                 <div className="mx-auto mt-8 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    {[
-                        {
-                            icon: '💊',
-                            title: 'Medical Checkup',
-                            desc: 'We will arrange like: Monthly regular health check-ups like BP, Diabetes, Thyroid etc.',
-                        },
-                        {
-                            icon: '❤️',
-                            title: 'Health Consultation',
-                            desc: 'If patient requires any hospital visit, we will arrange appointments with your doctor at your convenient time, and we accompany & support as your son or daughter till back home.',
-                        },
-                        {
-                            icon: '👩‍⚕️',
-                            title: 'Care Taker',
-                            desc: 'If necessary, we arrange care takers for your loved one. In case of absence, we provide suitable replacements.',
-                        },
-                        {
-                            icon: '🏠',
-                            title: 'House Services',
-                            desc: 'We arrange medicines, groceries, and even celebrations of birthdays, anniversaries, and gatherings with photo & video updates.',
-                        },
-                        {
-                            icon: '💳',
-                            title: 'Payments',
-                            desc: 'We will arrange monthly bill payments like water, electricity, phone, and any banking requirements.',
-                        },
-                        {
-                            icon: '⚰️',
-                            title: 'Funeral Services',
-                            desc: 'If necessary, we provide end-to-end funeral services for the deceased person.',
-                        },
-                    ].map((s) => (
+                    {servicesData.map((s) => (
                         <Card
                             key={s.title}
                             className="rounded-lg shadow-md transition hover:translate-y-[-4px]"
@@ -69,22 +98,15 @@ export default function Services() {
                                 <div className="bg-primary text-primary-foreground mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full text-2xl">
                                     {s.icon}
                                 </div>
-                                <CardTitle className="mb-2 text-xl font-semibold">
-                                    {s.title}
-                                </CardTitle>
-                                <CardDescription className="text-muted-foreground prose text-sm">
-                                    {s.desc}
-                                </CardDescription>
+                                <CardTitle className="mb-2 text-xl font-semibold">{s.title}</CardTitle>
+                                <CardDescription className="text-muted-foreground prose text-sm">{s.desc}</CardDescription>
                             </CardContent>
                         </Card>
                     ))}
                 </div>
             </main>
 
-            <Testimonials
-                containerClass="p-16"
-                innerClass="mx-auto flex max-w-4xl items-center gap-8"
-            />
+            <Testimonials containerClass="p-16" innerClass="mx-auto flex max-w-4xl items-center gap-8" />
 
             <Footer />
         </div>
