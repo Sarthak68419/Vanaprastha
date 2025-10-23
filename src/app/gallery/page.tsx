@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Image from 'next/image';
 import Footer from '../../components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -11,8 +12,6 @@ type GalleryImage = {
 };
 
 export default function Gallery() {
-    // Use real intrinsic dimensions so images render in a natural collage
-    // TODO: Use better alt texts - the current ones are misleading
     const images: GalleryImage[] = [
         {
             src: '/images/gallery/gallery1.jpg',
@@ -66,6 +65,43 @@ export default function Gallery() {
 
     return (
         <div className="bg-[var(--background)] text-[var(--foreground)]">
+            <Head>
+                <title>Gallery | Vanaprastha Care</title>
+                <meta
+                    name="description"
+                    content="Explore the Vanaprastha Care gallery showcasing our senior living spaces, activities, and happy residents. Experience the comfort, care, and community we provide."
+                />
+                <meta
+                    name="keywords"
+                    content="vanaprastha care gallery, elderly care images, senior living photos, elderly activities, senior care facility"
+                />
+                <link
+                    rel="canonical"
+                    href="https://vanaprasthcare.org/gallery"
+                />
+                <link rel="icon" href="/favicon.ico" />
+
+                {/* Open Graph / Social Meta Tags */}
+                <meta
+                    property="og:title"
+                    content="Gallery | Vanaprastha Care"
+                />
+                <meta
+                    property="og:description"
+                    content="Take a virtual tour through Vanaprastha Care's gallery. See our comfortable living spaces, engaging activities, and caring staff."
+                />
+                <meta
+                    property="og:image"
+                    content="https://vanaprasthcare.org/images/social-banner.png"
+                />
+                <meta
+                    property="og:url"
+                    content="https://vanaprasthcare.org/gallery"
+                />
+                <meta name="twitter:card" content="summary_large_image" />
+            </Head>
+
+            {/* PAGE CONTENT */}
             <section className="bg-foreground text-primary-foreground py-16 text-center">
                 <h1 className="text-4xl font-bold">Gallery</h1>
                 <div className="mt-2 flex justify-center">
@@ -84,7 +120,7 @@ export default function Gallery() {
                 <h3 className="text-2xl font-bold">Feel the Happiness</h3>
             </section>
 
-            {/* Masonry-style collage using CSS columns */}
+            {/* Masonry-style collage */}
             <section className="mx-auto max-w-6xl p-4">
                 <div className="columns-2 gap-4 sm:columns-3 lg:columns-4">
                     {images.map((img, idx) => (

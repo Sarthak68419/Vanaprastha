@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Image from 'next/image';
 import Footer from '../../components/Footer';
 import ContactForm from '@/components/ContactForm';
@@ -8,6 +9,44 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 export default function Contact() {
     return (
         <div className="bg-background text-foreground">
+            {/* SEO HEAD */}
+            <Head>
+                <title>Contact Us | Vanaprastha Care</title>
+                <meta
+                    name="description"
+                    content="Get in touch with Vanaprastha Care for compassionate and professional elderly care services. Reach us via phone, email, or visit our location in Hyderabad."
+                />
+                <meta
+                    name="keywords"
+                    content="contact vanaprastha care, elderly care contact, senior care help, Vanaprastha Care Hyderabad"
+                />
+                <link
+                    rel="canonical"
+                    href="https://vanaprasthcare.org/contact"
+                />
+                <link rel="icon" href="/favicon.ico" />
+
+                {/* Open Graph / Social Meta Tags */}
+                <meta
+                    property="og:title"
+                    content="Contact Us | Vanaprastha Care"
+                />
+                <meta
+                    property="og:description"
+                    content="Reach out to Vanaprastha Care for professional eldercare services in Hyderabad. Our team is here to provide support, guidance, and care."
+                />
+                <meta
+                    property="og:image"
+                    content="https://vanaprasthcare.org/images/social-banner.png"
+                />
+                <meta
+                    property="og:url"
+                    content="https://vanaprasthcare.org/contact"
+                />
+                <meta name="twitter:card" content="summary_large_image" />
+            </Head>
+
+            {/* PAGE CONTENT */}
             <section className="bg-foreground text-background py-16 text-center">
                 <h1 className="text-4xl font-bold">Contact</h1>
                 <div className="mt-2 flex justify-center">
@@ -29,8 +68,8 @@ export default function Contact() {
                             Come and be a part of our New Family
                         </h2>
                         <p className="mt-4">
-                            Elderlycare is an umbrella term for a wide array of
-                            services intended to help older people to live as
+                            Elderly care is an umbrella term for a wide array of
+                            services intended to help older people live as
                             comfortably and independently as possible.
                         </p>
                     </div>
@@ -38,17 +77,15 @@ export default function Contact() {
                     <div className="mt-6 flex items-start gap-4">
                         <Image
                             src="/images/home/clock.jpg"
-                            alt="work hours"
+                            alt="Work hours for Vanaprastha Care"
                             width={48}
                             height={48}
                         />
                         <div>
                             <h4 className="font-semibold">Work Hours</h4>
                             <p className="text-sm">
-                                Monday - Sunday
-                                <br />
-                                Open 24/7 Services on demand
-                                <br />
+                                Monday - Sunday <br />
+                                Open 24/7 Services on demand <br />
                                 (Normal: 9:00 AM to 5:00 PM)
                             </p>
                         </div>
@@ -64,7 +101,7 @@ export default function Contact() {
                                 KVR Hospital Premises, 3-5-118/4, 16 Shutter X
                                 Road, Opposite SYR Swimming Pool, Hyderaguda,
                                 Attapur, Rajendranagar Mandal, Hyderabad,
-                                Telangana 500048 India
+                                Telangana 500048, India
                             </p>
                         </div>
                     </div>
@@ -76,8 +113,7 @@ export default function Contact() {
                         <div>
                             <h4 className="font-semibold">Call Now</h4>
                             <p className="text-sm">
-                                Whatsapp: +91 9010647888
-                                <br />
+                                Whatsapp: +91 9010647888 <br />
                                 Phone: 04035837011
                             </p>
                             <p className="text-sm">

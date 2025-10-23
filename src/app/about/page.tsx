@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
 import AboutSection from '@/components/AboutSection';
@@ -15,6 +16,40 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 export default function About() {
     return (
         <div className="bg-background text-foreground">
+            {/* SEO HEAD */}
+            <Head>
+                <title>About Us | Vanaprastha Care</title>
+                <meta
+                    name="description"
+                    content="Learn about Vanaprastha Care's mission to provide compassionate and personalized elderly care at home. Our vision is to bring comfort, dignity, and peace to every senior we serve."
+                />
+                <meta
+                    name="keywords"
+                    content="about vanaprastha care, elderly care india, senior care, home health care, caregivers for elderly"
+                />
+                <link rel="canonical" href="https://vanaprasthcare.org/about" />
+                <link rel="icon" href="/favicon.ico" /> {/* Add your favicon */}
+                {/* Open Graph / Social Meta */}
+                <meta
+                    property="og:title"
+                    content="About Us | Vanaprastha Care"
+                />
+                <meta
+                    property="og:description"
+                    content="Vanaprastha Care offers compassionate elderly care services at home, guided by empathy, dignity, and experience."
+                />
+                <meta
+                    property="og:image"
+                    content="https://vanaprasthcare.org/images/social-banner.png"
+                />
+                <meta
+                    property="og:url"
+                    content="https://vanaprasthcare.org/about"
+                />
+                <meta name="twitter:card" content="summary_large_image" />
+            </Head>
+
+            {/* PAGE CONTENT */}
             <section className="bg-foreground text-background py-16 text-center">
                 <h1 className="text-4xl font-bold">About Us</h1>
                 <div className="mt-2 flex justify-center">
@@ -71,7 +106,7 @@ export default function About() {
                         <CardContent className="p-6">
                             <Image
                                 src="/images/about/vision.jpg"
-                                alt="vision icon"
+                                alt="Vision Icon"
                                 width={80}
                                 height={80}
                                 className="mx-auto mb-4"
@@ -88,7 +123,7 @@ export default function About() {
                         <CardContent className="p-6">
                             <Image
                                 src="/images/about/mission.jpg"
-                                alt="mission icon"
+                                alt="Mission Icon"
                                 width={80}
                                 height={80}
                                 className="mx-auto mb-4"
@@ -105,7 +140,6 @@ export default function About() {
 
             <WhyChooseUs />
             <TeamSection />
-
             <Footer />
         </div>
     );
