@@ -1,9 +1,10 @@
 import React from 'react';
-import Head from 'next/head'; // ✅ Added for SEO
+import Head from 'next/head';
 import Image from 'next/image';
 import Footer from '../../components/Footer';
 import ContactForm from '@/components/ContactForm';
 import { MapPin, Phone, Mail } from 'lucide-react';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function Contact() {
     return (
@@ -19,11 +20,17 @@ export default function Contact() {
                     name="keywords"
                     content="contact vanaprastha care, elderly care contact, senior care help, Vanaprastha Care Hyderabad"
                 />
-                <link rel="canonical" href="https://vanaprasthcare.org/contact" />
+                <link
+                    rel="canonical"
+                    href="https://vanaprasthcare.org/contact"
+                />
                 <link rel="icon" href="/favicon.ico" />
 
                 {/* Open Graph / Social Meta Tags */}
-                <meta property="og:title" content="Contact Us | Vanaprastha Care" />
+                <meta
+                    property="og:title"
+                    content="Contact Us | Vanaprastha Care"
+                />
                 <meta
                     property="og:description"
                     content="Reach out to Vanaprastha Care for professional eldercare services in Hyderabad. Our team is here to provide support, guidance, and care."
@@ -32,16 +39,25 @@ export default function Contact() {
                     property="og:image"
                     content="https://vanaprasthcare.org/images/social-banner.png"
                 />
-                <meta property="og:url" content="https://vanaprasthcare.org/contact" />
+                <meta
+                    property="og:url"
+                    content="https://vanaprasthcare.org/contact"
+                />
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
 
             {/* PAGE CONTENT */}
             <section className="bg-foreground text-background py-16 text-center">
                 <h1 className="text-4xl font-bold">Contact</h1>
-                <p className="mt-2">
-                    <span className="text-primary">Home</span> / Contact
-                </p>
+                <div className="mt-2 flex justify-center">
+                    <Breadcrumbs
+                        invertColors
+                        items={[
+                            { label: 'Home', href: '/' },
+                            { label: 'Contact' },
+                        ]}
+                    />
+                </div>
             </section>
 
             <main className="mx-auto grid max-w-6xl grid-cols-1 gap-8 p-8 md:grid-cols-2">
@@ -52,9 +68,9 @@ export default function Contact() {
                             Come and be a part of our New Family
                         </h2>
                         <p className="mt-4">
-                            Elderly care is an umbrella term for a wide array of services
-                            intended to help older people live as comfortably and
-                            independently as possible.
+                            Elderly care is an umbrella term for a wide array of
+                            services intended to help older people live as
+                            comfortably and independently as possible.
                         </p>
                     </div>
 
@@ -82,7 +98,10 @@ export default function Contact() {
                         <div>
                             <h4 className="font-semibold">Our Location</h4>
                             <p className="text-sm">
-                                KVR Hospital Premises, 3-5-118/4, 16 Shutter X Road, Opposite SYR Swimming Pool, Hyderaguda, Attapur, Rajendranagar Mandal, Hyderabad, Telangana 500048, India
+                                KVR Hospital Premises, 3-5-118/4, 16 Shutter X
+                                Road, Opposite SYR Swimming Pool, Hyderaguda,
+                                Attapur, Rajendranagar Mandal, Hyderabad,
+                                Telangana 500048, India
                             </p>
                         </div>
                     </div>
@@ -97,9 +116,12 @@ export default function Contact() {
                                 Whatsapp: +91 9010647888 <br />
                                 Phone: 04035837011
                             </p>
-                            <p className="text-sm">Manager: Bindhu — +91 8142569565</p>
                             <p className="text-sm">
-                                Marketing Manager: Srinivas Reddy — +91 7893133363
+                                Manager: Bindhu — +91 8142569565
+                            </p>
+                            <p className="text-sm">
+                                Marketing Manager: Srinivas Reddy — +91
+                                7893133363
                             </p>
                         </div>
                     </div>
@@ -110,7 +132,9 @@ export default function Contact() {
                         </div>
                         <div>
                             <h4 className="font-semibold">Our Email</h4>
-                            <p className="text-sm">ranikoppula.reddy.rk@gmail.com</p>
+                            <p className="text-sm">
+                                ranikoppula.reddy.rk@gmail.com
+                            </p>
                         </div>
                     </div>
                 </div>

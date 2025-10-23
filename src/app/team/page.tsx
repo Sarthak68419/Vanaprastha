@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import Footer from '../../components/Footer';
+import Footer from '@/components/Footer';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function Team() {
     const members = [
@@ -31,9 +32,15 @@ export default function Team() {
         <div className="bg-background text-foreground">
             <section className="bg-foreground text-background py-16 text-center">
                 <h1 className="text-4xl font-bold">Team</h1>
-                <p className="mt-2">
-                    <span className="text-primary">Home</span> / Team
-                </p>
+                <div className="mt-2 flex justify-center">
+                    <Breadcrumbs
+                        invertColors
+                        items={[
+                            { label: 'Home', href: '/' },
+                            { label: 'Team' },
+                        ]}
+                    />
+                </div>
             </section>
 
             <section className="py-12 text-center">

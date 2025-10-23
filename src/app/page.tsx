@@ -1,11 +1,11 @@
 import React from 'react';
-import Head from 'next/head'; // ✅ Added for SEO
+import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import Footer from '../components/Footer';
-import AboutSection from '../components/AboutSection';
-import WhyChooseUs from './components/WhyChooseUs';
-import TeamSection from './components/TeamSection';
+import Footer from '@/components/Footer';
+import AboutSection from '@/components/AboutSection';
+import WhyChooseUs from '@/components/WhyChooseUs';
+import TeamSection from '@/components/TeamSection';
 import Testimonials from '@/components/Testimonials';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -15,9 +15,10 @@ import { MapPin, Phone, Mail } from 'lucide-react';
 export default function Home() {
     return (
         <div className="bg-background text-foreground">
-            {/* ✅ SEO HEAD SECTION */}
             <Head>
-                <title>Vanaprastha Care - Compassionate Elderly Care Services</title>
+                <title>
+                    Vanaprastha Care - Compassionate Elderly Care Services
+                </title>
                 <meta
                     name="description"
                     content="Vanaprastha Care provides elderly care at home with empathy, dignity, and comfort. Flexible visits, 24/7 support, and personalized services."
@@ -29,23 +30,35 @@ export default function Home() {
                 <link rel="canonical" href="https://vanaprasthcare.org/" />
 
                 {/* Open Graph / Social Meta Tags */}
-                <meta property="og:title" content="Vanaprastha Care - Compassionate Elderly Care Services" />
+                <meta
+                    property="og:title"
+                    content="Vanaprastha Care - Compassionate Elderly Care Services"
+                />
                 <meta
                     property="og:description"
                     content="Vanaprastha Care provides elderly care at home with empathy, dignity, and comfort. Flexible visits, 24/7 support, and personalized services."
                 />
-                <meta property="og:image" content="https://vanaprasthcare.org/images/social-banner.png" />
+                <meta
+                    property="og:image"
+                    content="https://vanaprasthcare.org/images/social-banner.png"
+                />
                 <meta property="og:url" content="https://vanaprasthcare.org/" />
                 <meta property="og:type" content="website" />
 
                 {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Vanaprastha Care - Compassionate Elderly Care Services" />
+                <meta
+                    name="twitter:title"
+                    content="Vanaprastha Care - Compassionate Elderly Care Services"
+                />
                 <meta
                     name="twitter:description"
                     content="Vanaprastha Care provides elderly care at home with empathy, dignity, and comfort. Flexible visits, 24/7 support, and personalized services."
                 />
-                <meta name="twitter:image" content="https://vanaprasthcare.org/images/social-banner.png" />
+                <meta
+                    name="twitter:image"
+                    content="https://vanaprasthcare.org/images/social-banner.png"
+                />
 
                 {/* Favicon */}
                 <link rel="icon" href="/favicon.ico" />

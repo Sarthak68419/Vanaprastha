@@ -22,7 +22,9 @@ export default function TeamSection({
     return (
         <section className="bg-secondary p-16 text-center">
             <p className="text-primary">{eyebrow}</p>
-            <h2 className="mx-auto mt-2 mb-6 max-w-2xl text-2xl font-bold">{title}</h2>
+            <h2 className="mx-auto mt-2 mb-6 max-w-2xl text-2xl font-bold">
+                {title}
+            </h2>
 
             <div className="mx-auto mb-6 max-w-4xl">
                 <Image

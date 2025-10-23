@@ -1,25 +1,25 @@
 {
-  "short_name": "Vanaprastha Care",
-  "name": "Vanaprastha - Elderly Care Services",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "16x16 32x32 64x64",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "favicon.ico",
-      "sizes": "192x192",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "favicon.ico",
-      "sizes": "512x512",
-      "type": "image/x-icon"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+    "short_name": "Vanaprastha Care",
+    "name": "Vanaprastha - Elderly Care Services",
+    "icons": [
+        {
+            "src": "favicon.ico",
+            "sizes": "16x16 32x32 64x64",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "favicon.ico",
+            "sizes": "192x192",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "favicon.ico",
+            "sizes": "512x512",
+            "type": "image/x-icon"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
 }

@@ -30,10 +30,16 @@ export default function WhyChooseUs({
                     name="keywords"
                     content="elderly care, senior services, eldercare India, home care for seniors, Vanaprastha Care"
                 />
-                <link rel="canonical" href="https://vanaprasthcare.org/#why-choose-us" />
+                <link
+                    rel="canonical"
+                    href="https://vanaprasthcare.org/#why-choose-us"
+                />
 
                 {/* Open Graph / Social Meta */}
-                <meta property="og:title" content="Why Choose Us | Vanaprastha Care" />
+                <meta
+                    property="og:title"
+                    content="Why Choose Us | Vanaprastha Care"
+                />
                 <meta
                     property="og:description"
                     content="Discover why seniors and families trust Vanaprastha Care for compassionate, top-quality eldercare services at reasonable cost."
@@ -42,7 +48,10 @@ export default function WhyChooseUs({
                     property="og:image"
                     content="https://vanaprasthcare.org/images/home/choose_us.jpg"
                 />
-                <meta property="og:url" content="https://vanaprasthcare.org/#why-choose-us" />
+                <meta
+                    property="og:url"
+                    content="https://vanaprasthcare.org/#why-choose-us"
+                />
                 <meta name="twitter:card" content="summary_large_image" />
 
                 {/* Optional JSON-LD for Services */}
@@ -50,28 +59,35 @@ export default function WhyChooseUs({
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
                         __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "Service",
-                            "serviceType": "Elderly Care",
-                            "provider": {
-                                "@type": "Organization",
-                                "name": "Vanaprastha Care",
-                                "url": "https://vanaprasthcare.org",
-                                "logo": "https://vanaprasthcare.org/logo.png"
+                            '@context': 'https://schema.org',
+                            '@type': 'Service',
+                            serviceType: 'Elderly Care',
+                            provider: {
+                                '@type': 'Organization',
+                                name: 'Vanaprastha Care',
+                                url: 'https://vanaprasthcare.org',
+                                logo: 'https://vanaprasthcare.org/logo.png',
                             },
-                            "description": description,
-                            "areaServed": "India",
-                            "image": `https://vanaprasthcare.org${imageSrc}`
-                        })
+                            description: description,
+                            areaServed: 'India',
+                            image: `https://vanaprasthcare.org${imageSrc}`,
+                        }),
                     }}
                 />
             </Head>
 
-            <section id="why-choose-us" className="bg-background mb-12 flex flex-wrap items-stretch">
+            <section
+                id="why-choose-us"
+                className="bg-background mb-12 flex flex-wrap items-stretch"
+            >
                 <div className="bg-primary text-primary-foreground flex flex-1 flex-col justify-center p-12">
                     <h4 className="mb-2 text-base">{eyebrow}</h4>
-                    <h2 className="mb-4 text-2xl leading-tight font-bold">{title}</h2>
-                    <p className="prose text-background mb-6 font-light">{description}</p>
+                    <h2 className="mb-4 text-2xl leading-tight font-bold">
+                        {title}
+                    </h2>
+                    <p className="prose text-background mb-6 font-light">
+                        {description}
+                    </p>
 
                     <div className="mb-4 flex items-start gap-4">
                         <Image
@@ -83,7 +99,8 @@ export default function WhyChooseUs({
                         <div>
                             <h3 className="text-lg">Reasonable Cost</h3>
                             <p>
-                                We provide eldercare services at very reasonable cost without compromising quality.
+                                We provide eldercare services at very reasonable
+                                cost without compromising quality.
                             </p>
                         </div>
                     </div>
@@ -98,7 +115,9 @@ export default function WhyChooseUs({
                         <div>
                             <h3 className="text-lg">Good Quality Services</h3>
                             <p>
-                                Seniors can join our centres flexibly, and we cater for ad-hoc and short-term care arrangements where needed.
+                                Seniors can join our centres flexibly, and we
+                                cater for ad-hoc and short-term care
+                                arrangements where needed.
                             </p>
                         </div>
                     </div>

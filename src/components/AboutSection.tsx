@@ -27,12 +27,12 @@ export default function AboutSection({
     return (
         <section
             className="mx-auto flex max-w-6xl items-center gap-8 p-6"
-            aria-label={title} // ✅ Improves accessibility & SEO
+            aria-label={title}
         >
             <div className="flex-1 overflow-hidden rounded-lg">
                 <Image
                     src={imageSrc}
-                    alt={imageAlt} // ✅ Make this descriptive
+                    alt={imageAlt}
                     width={800}
                     height={500}
                     className="block h-[600px] w-full object-cover object-[30%_center]"
@@ -43,7 +43,7 @@ export default function AboutSection({
                     {eyebrow}
                 </span>
                 <h2 className="text-foreground mt-2 mb-4 text-3xl leading-tight font-bold">
-                    {title} {/* ✅ h2 is better for SEO if page already has h1 */}
+                    {title}
                 </h2>
                 <div className="prose prose-neutral max-w-none">
                     {lead ? <p className="mb-2 italic">{lead}</p> : null}

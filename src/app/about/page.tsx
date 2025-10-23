@@ -1,16 +1,17 @@
 import React from 'react';
-import Head from 'next/head'; // ✅ SEO HEAD
+import Head from 'next/head';
 import Image from 'next/image';
-import Footer from '../../components/Footer';
-import AboutSection from '../../components/AboutSection';
-import WhyChooseUs from '../components/WhyChooseUs';
-import TeamSection from '../components/TeamSection';
+import Footer from '@/components/Footer';
+import AboutSection from '@/components/AboutSection';
+import WhyChooseUs from '@/components/WhyChooseUs';
+import TeamSection from '@/components/TeamSection';
 import {
     Card,
     CardTitle,
     CardDescription,
     CardContent,
 } from '@/components/ui/card';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function About() {
     return (
@@ -28,9 +29,11 @@ export default function About() {
                 />
                 <link rel="canonical" href="https://vanaprasthcare.org/about" />
                 <link rel="icon" href="/favicon.ico" /> {/* Add your favicon */}
-
                 {/* Open Graph / Social Meta */}
-                <meta property="og:title" content="About Us | Vanaprastha Care" />
+                <meta
+                    property="og:title"
+                    content="About Us | Vanaprastha Care"
+                />
                 <meta
                     property="og:description"
                     content="Vanaprastha Care offers compassionate elderly care services at home, guided by empathy, dignity, and experience."
@@ -39,16 +42,25 @@ export default function About() {
                     property="og:image"
                     content="https://vanaprasthcare.org/images/social-banner.png"
                 />
-                <meta property="og:url" content="https://vanaprasthcare.org/about" />
+                <meta
+                    property="og:url"
+                    content="https://vanaprasthcare.org/about"
+                />
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
 
             {/* PAGE CONTENT */}
             <section className="bg-foreground text-background py-16 text-center">
                 <h1 className="text-4xl font-bold">About Us</h1>
-                <p className="mt-2">
-                    <span className="text-primary">Home</span> / About Us
-                </p>
+                <div className="mt-2 flex justify-center">
+                    <Breadcrumbs
+                        invertColors
+                        items={[
+                            { label: 'Home', href: '/' },
+                            { label: 'About Us' },
+                        ]}
+                    />
+                </div>
             </section>
 
             <AboutSection
@@ -77,12 +89,15 @@ export default function About() {
 
             <section className="vision-mission bg-primary text-primary-foreground flex flex-wrap gap-8 p-16">
                 <div className="min-w-[280px] flex-1">
-                    <h4 className="mb-2 text-lg font-medium">Vision & Mission</h4>
+                    <h4 className="mb-2 text-lg font-medium">
+                        Vision & Mission
+                    </h4>
                     <h2 className="mb-4 text-3xl leading-tight font-bold text-balance">
                         WE ARE LIKE SHOULDER SUPPORT FOR YOUR ELDERS
                     </h2>
                     <p className="font-light">
-                        We provide you all the comforts including Health at Your Doorstep
+                        We provide you all the comforts including Health at Your
+                        Doorstep
                     </p>
                 </div>
 
@@ -98,7 +113,8 @@ export default function About() {
                             />
                             <CardTitle className="text-lg">Vision</CardTitle>
                             <CardDescription className="mt-2 text-sm text-[#444]">
-                                COMFORTABLE & PEACEFUL LIFE at their home - Even at their terminal stage of life with our support
+                                COMFORTABLE & PEACEFUL LIFE at their home - Even
+                                at their terminal stage of life with our support
                             </CardDescription>
                         </CardContent>
                     </Card>
@@ -114,7 +130,8 @@ export default function About() {
                             />
                             <CardTitle className="text-lg">Mission</CardTitle>
                             <CardDescription className="mt-2 text-sm text-[#444]">
-                                To provide the best care to every Elderly Person through a strong focus on service.
+                                To provide the best care to every Elderly Person
+                                through a strong focus on service.
                             </CardDescription>
                         </CardContent>
                     </Card>
@@ -127,5 +144,3 @@ export default function About() {
         </div>
     );
 }
-
-
