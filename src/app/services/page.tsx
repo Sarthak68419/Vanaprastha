@@ -71,9 +71,6 @@ export default function Services() {
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
 
-            {/* ✅ Empty Section (between navbar and services) */}
-            <section className="py-16 text-center"></section>
-
             {/* PAGE HEADER */}
             <section className="bg-foreground text-background py-16 text-center">
                 <h1 className="text-4xl font-bold">Services</h1>
