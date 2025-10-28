@@ -58,8 +58,6 @@ export default function Services() {
                 />
                 <link rel="canonical" href="https://vanaprasthcare.org/services" />
                 <link rel="icon" href="/favicon.ico" />
-
-                {/* Open Graph / Social Meta Tags */}
                 <meta property="og:title" content="Services | Vanaprastha Care" />
                 <meta
                     property="og:description"
@@ -73,7 +71,10 @@ export default function Services() {
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
 
-            {/* PAGE CONTENT */}
+            {/* ✅ Empty Section (between navbar and services) */}
+            <section className="py-16 text-center"></section>
+
+            {/* PAGE HEADER */}
             <section className="bg-foreground text-background py-16 text-center">
                 <h1 className="text-4xl font-bold">Services</h1>
                 <p className="mt-2">
@@ -81,6 +82,51 @@ export default function Services() {
                 </p>
             </section>
 
+            {/* 🏥 NEW: Hospital Locations Section */}
+            <section className="mx-auto max-w-5xl px-8 py-12 text-center">
+                <h3 className="text-2xl font-semibold text-primary mb-4">
+                    Our Hospital Locations
+                </h3>
+                <p className="text-muted-foreground mb-8">
+                    Vanaprastha Care proudly partners with trusted hospitals across Telangana
+                    to ensure accessible, quality healthcare for our elderly residents.
+                </p>
+
+                <div className="grid gap-6 sm:grid-cols-2">
+                    <div className="rounded-lg border p-4 text-left shadow-sm hover:shadow-md transition">
+                        <h4 className="font-semibold text-lg mb-2">🏥 KVR Hospital</h4>
+                        <p className="text-sm text-muted-foreground">
+                            3-5-118-6/4, 16 Shutter X Road, Opp. SYR Swimming Pool,
+                            Hyderguda, Attapur, Rajendranagar Mandal, Hyderabad, Telangana 500048
+                        </p>
+                    </div>
+
+                    <div className="rounded-lg border p-4 text-left shadow-sm hover:shadow-md transition">
+                        <h4 className="font-semibold text-lg mb-2">🏥 Maa Sharada Hospital</h4>
+                        <p className="text-sm text-muted-foreground">
+                            Near Mahaveer Hospital Road, Yennepally, Vikarabad, Telangana 501101
+                        </p>
+                    </div>
+
+                    <div className="rounded-lg border p-4 text-left shadow-sm hover:shadow-md transition">
+                        <h4 className="font-semibold text-lg mb-2">🏥 Star Hospital</h4>
+                        <p className="text-sm text-muted-foreground">
+                            1-6-141/7/3/B6, beside Sri Sai Triveni Degree College,
+                            Vidyanagar, Suryapet, Telangana 508213
+                        </p>
+                    </div>
+
+                    <div className="rounded-lg border p-4 text-left shadow-sm hover:shadow-md transition">
+                        <h4 className="font-semibold text-lg mb-2">🏥 Placeholder Hospital</h4>
+                        <p className="text-sm text-muted-foreground">
+                            Address details coming soon. Vanaprastha Care continues to expand
+                            its healthcare partnerships for better senior well-being.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* SERVICES LIST */}
             <main className="mx-auto max-w-6xl p-8 text-center">
                 <h4 className="text-primary">Services</h4>
                 <h2 className="mt-2 text-3xl font-bold">You Are In Good Hands</h2>
@@ -98,8 +144,12 @@ export default function Services() {
                                 <div className="bg-primary text-primary-foreground mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full text-2xl">
                                     {s.icon}
                                 </div>
-                                <CardTitle className="mb-2 text-xl font-semibold">{s.title}</CardTitle>
-                                <CardDescription className="text-muted-foreground prose text-sm">{s.desc}</CardDescription>
+                                <CardTitle className="mb-2 text-xl font-semibold">
+                                    {s.title}
+                                </CardTitle>
+                                <CardDescription className="text-muted-foreground prose text-sm">
+                                    {s.desc}
+                                </CardDescription>
                             </CardContent>
                         </Card>
                     ))}
@@ -107,7 +157,6 @@ export default function Services() {
             </main>
 
             <Testimonials containerClass="p-16" innerClass="mx-auto flex max-w-4xl items-center gap-8" />
-
             <Footer />
         </div>
     );
