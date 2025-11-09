@@ -114,10 +114,9 @@ export default function Services() {
                     </div>
 
                     <div className="rounded-lg border p-4 text-left shadow-sm hover:shadow-md transition">
-                        <h4 className="font-semibold text-lg mb-2">🏥 Placeholder Hospital</h4>
+                        <h4 className="font-semibold text-lg mb-2">🏥 Desai Hospital</h4>
                         <p className="text-sm text-muted-foreground">
-                            Address details coming soon. Vanaprastha Care continues to expand
-                            its healthcare partnerships for better senior well-being.
+                            Moka Rd, KHB Colony, KEB Quarters, Gandhi Nagar, Ballari, Karnataka 583103
                         </p>
                     </div>
                 </div>
